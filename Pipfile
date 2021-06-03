@@ -10,6 +10,7 @@ importlib-metadata = "==1.7.0"
 psycopg2-binary = "==2.8.5"
 psycopg2 = "*"
 pillow = "*"
+django-tailwind = "*"
 
 [dev-packages]
 

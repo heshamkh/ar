@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'event',
+    'tailwind',
+    'theme'
 ]
 
 MIDDLEWARE = [
@@ -107,6 +109,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# INTERNAL_IPS = [
+#     "127.0.0.1",
+# ]
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -126,3 +131,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),)
+STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
+STATICFILES_FINDERS = [
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+]
+TAILWIND_APP_NAME = 'theme'
+
+# NPM_BIN_PATH = 'C:\\Program Files\\nodejs\\npm.cmd'
+NPM_BIN_PATH='docker.io/library/node'
+
+
