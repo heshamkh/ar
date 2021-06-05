@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'event',
     'tailwind',
     'theme'
@@ -138,8 +139,10 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 TAILWIND_APP_NAME = 'theme'
+# MEDIA_ROOT = str(BASE_DIR.joinpath('covers'))
+# MEDIA_URL = '/covers/'
 
 # NPM_BIN_PATH = 'C:\\Program Files\\nodejs\\npm.cmd'
-NPM_BIN_PATH='docker.io/library/node'
+# NPM_BIN_PATH='docker.io/library/node'
 
 

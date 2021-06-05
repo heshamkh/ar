@@ -1,14 +1,14 @@
 
 <!DOCTYPE html>
 {% load static %}
-{% load static tailwind_tags %}
+
 <html>
 <head>
   <meta charset="utf-8">
   <title>{% block title %}Bookstore{% endblock title %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1,
   shrink-to-fit=no">
-  {% tailwind_css %}
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
   <!-- CSS only -->
 <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">-->
@@ -23,6 +23,7 @@
       <a href="{% url 'home' %}" class="navbar-brand my-0 mr-md-auto
       font-bold"><span>Dz</span>DazShop</a>
         <nav class="my-2 my-md-0 mr-md-3">
+          <a href="{% url 'events' %}">Events</a>
       </nav>
     </div>
   </header>

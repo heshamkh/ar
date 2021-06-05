@@ -11,6 +11,9 @@ psycopg2-binary = "==2.8.5"
 psycopg2 = "*"
 pillow = "*"
 django-tailwind = "*"
+django-extensions = "*"
+pyparsing = "*"
+pydot = "*"
 
 [dev-packages]
 

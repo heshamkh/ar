@@ -11,9 +11,7 @@ class Asset(models.Model):
                 editable=False)
             code = models.CharField(max_length=400)
             featured_image = models.ImageField(upload_to='covers/', blank=True)
-            Latitude = models.CharField(max_length=200)
             Google_maps_link = models.CharField(max_length=200)
-            Plus_code = models.CharField(max_length=200)
             ASSETS_TYPE = [("IOS", 'IOS'),("ANDROID", 'Android'),]
             ASSETS_TYPE = models.CharField(
                 max_length=8,
@@ -34,10 +32,11 @@ class Location(models.Model):
                 default=uuid.uuid4,
                 editable=False)
             Name = models.CharField(max_length=200)
-            Longitude = models.CharField(max_length=200)
-            Latitude = models.CharField(max_length=200)
+            Longitude = models.DecimalField(null=True,max_digits = 10,decimal_places=10)
+            Latitude = models.DecimalField(null=True,max_digits = 10,decimal_places=10)
             Google_maps_link = models.CharField(max_length=200)
             Plus_code = models.CharField(max_length=200)
+            Radius=models.DecimalField(null=True,max_digits = 10,decimal_places=10)
             asset = models.ForeignKey(
                         Asset,
                         on_delete=models.CASCADE,
@@ -56,7 +55,11 @@ class Event(models.Model):
                  editable=False)
             Name = models.CharField(max_length=200)
             Photo = models.ImageField(upload_to='covers/', blank=True)
-            Locations = models.CharField(max_length=200)
+            Locations = models.ForeignKey(
+                Asset,
+                on_delete=models.CASCADE,
+                related_name='Locations',
+            )
             starting_date = models.DateField(null=True)
             ending_date = models.DateField(null=True)
             user = models.ForeignKey(
