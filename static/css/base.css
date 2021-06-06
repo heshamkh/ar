@@ -1,7 +1,29 @@
-h1 {
-  color: red;
-}
+
 .bookcover {
   height: 300px;
   width: auto;
+}
+.creationForm p{
+margin-top:2%;
+margin-bottom:2%;
+}
+input, select, textarea , .imageInput{
+    padding: 2%;
+    line-height: inherit;
+    color: inherit;
+    background-color: #F8FAFC;;
+    width: 100%;
+    border-radius: 5px;
+}
+input:focus,button:focus{
+outline:none !important
+}
+input[type=checkbox] {
+    padding: 0%;
+    background-color: transparent;
+    width: auto;
+    border-radius: 3px;
+}
+input[type="file"] {
+    display: none;
 }
