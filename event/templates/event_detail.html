@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+{% block content %}
+  <div class="article-entry">
+      {% if object.Photo %}
+     <img class="bookcover" src="{{ object.Photo.url }}">
+        {% endif %}
+    <h2>{{ object.Name }}</h2>
+    <p> <span class="text-muted"> Starting date: {{ object.Starting_date }} | Ending date: {{ object.Ending_date }}</span></p>
+    <p>Locations {{ event.Locations }}</p>
+  </div>
+
+  <p><a href="{% url 'event_edit' event.id %}">Edit</a> |
+    <a href="{% url 'event_delete' event.id %}">Delete</a></p>
+  <p>Back to <a href="{% url 'events' %}">All Articles</a>.</p>
+{% endblock content %}

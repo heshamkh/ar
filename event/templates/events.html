@@ -3,6 +3,7 @@
 {% block title %}events{% endblock title %}
 
 {% block content %}
+<div class="grid grid-cols-3 gap-4 w-5/6 pl-6 pt-6">
   {% for event in object_list %}
     <div class="card">
       {% if event.Photo %}
@@ -10,16 +11,16 @@
 {% endif %}
 
       <div class="card-header">
-        <span class="font-weight-bold">{{ event.Name }}</span> &middot;<br>
+        <a href="{% url 'event_detail' event.id %}" class="font-weight-bold">{{ event.Name }}</a> &middot;<br>
         <span class="text-muted"> Starting date: {{ event.Starting_date }} | Ending date: {{ event.Ending_date }}</span>
       </div>
       <div class="card-body">
        Locations {{ event.Locations }}
       </div>
       <div class="card-footer text-center text-muted">
-        <a href="#">Edit</a> | <a href="#">Delete</a>
+        <a href="{% url 'event_edit' event.id %}">Edit</a> | <a href="{% url 'event_delete' event.id %}">Delete</a>
       </div>
     </div>
-    <br />
   {% endfor %}
+</div>
 {% endblock content %}

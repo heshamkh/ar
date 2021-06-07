@@ -1,0 +1,28 @@
+{% extends '_base.html' %}
+
+{% block title %}assets{% endblock title %}
+
+{% block content %}
+<div class="grid grid-cols-3 gap-4 w-5/6 pl-6 pt-6">
+  {% for asset in object_list %}
+    <div class="card">
+      {% if asset.featured_image %}
+     <img class="bookcover" src="{{ asset.featured_image.url }}">
+{% endif %}
+
+      <div class="card-header">
+        <span class="font-weight-bold">{{ asset.code }}</span> &middot;<br>
+        <span class="text-muted">Expiry_date: {{ asset.Expiry_date }} | Expiry_time: {{ asset.Expiry_time }}  </span>
+      </div>
+      <div class="card-body">
+       ASSETS_TYPE: {{ asset.ASSETS_TYPE }}
+          Google_maps_link: {{ asset.Google_maps_link }}
+      </div>
+      <div class="card-footer text-center text-muted">
+        <a href="#">Edit</a> | <a href="#">Delete</a>
+      </div>
+    </div>
+
+  {% endfor %}
+</div>
+{% endblock content %}

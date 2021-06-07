@@ -31,6 +31,9 @@ class Asset(models.Model):
     def __str__(self):
         return self.code
 
+    def get_absolute_url(self):
+        return reverse('Assets_list')
+
 
 class Location(models.Model):
     id = models.UUIDField(
@@ -63,7 +66,7 @@ class Event(models.Model):
         default=uuid.uuid4,
         editable=False)
     Name = models.CharField(max_length=200)
-    Photo = models.ImageField(upload_to='covers/', blank=True)
+    Photo = models.ImageField(upload_to='covers/', blank=True,null=True)
 
     starting_date = models.DateField(null=True)
     ending_date = models.DateField(null=True)
@@ -78,7 +81,7 @@ class Event(models.Model):
         return self.Name
 
     def get_absolute_url(self):
-        return reverse('events.html')
+        return reverse('events')
 
 
 

@@ -5,7 +5,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>{% block title %}Bookstore{% endblock title %}</title>
+  <title>{% block title %}AR Project{% endblock title %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
@@ -24,7 +24,14 @@
   </header>
   <div class="flex flex-row">
      <nav class="w-1/5 border-r-2 text-center">
-          <a href="{% url 'events' %}">Events</a> | <a href="{% url 'event_new' %}">+ New </a>
+         <ul>
+             <li>
+                 <a href="{% url 'events' %}">Events</a> | <a href="{% url 'event_new' %}">+ New </a>
+             </li>
+             <li>
+                 <a href="{% url 'Assets_list' %}">Assets</a> | <a href="{% url 'event_new' %}">+ New </a>
+             </li>
+         </ul>
       </nav>
      <div class="container">
     {% block content %}
