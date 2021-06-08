@@ -7,7 +7,7 @@
         {% endif %}
     <h2>{{ object.Name }}</h2>
     <p> <span class="text-muted"> Starting date: {{ object.Starting_date }} | Ending date: {{ object.Ending_date }}</span></p>
-    <p>Locations {{ event.Locations }}</p>
+    <p>Locations {{ object.Locations }}</p>
   </div>
 
   <p><a href="{% url 'event_edit' event.id %}">Edit</a> |

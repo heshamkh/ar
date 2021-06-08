@@ -30,3 +30,21 @@ class EventCreationForm(forms.ModelForm):
         widget=forms.CheckboxSelectMultiple
     )
 
+
+class AssetCreationForm(forms.ModelForm):
+
+    class Meta:
+        model = Asset
+        fields = ['code', 'featured_image', 'Google_maps_link', 'ASSETS_TYPE', 'Expiry_date', 'Expiry_time']
+        widgets = {
+            'Expiry_date': forms.DateInput(format=('%Y-%m-%d'),
+                                             attrs={'class': 'datepicker1', 'placeholder': 'Select Date', 'type': 'date'}),
+            'Expiry_time': forms.TimeInput(format='%H:%M',attrs={'type': 'time'}),
+        }
+
+    code = forms.CharField()
+    Google_maps_link = forms.CharField()
+
+    featured_image = forms.ImageField()
+
+    ASSETS_TYPE = forms.Select()

@@ -1,7 +1,7 @@
 from django.http import HttpResponse, HttpResponseForbidden
 from django.views.generic import TemplateView, ListView
 from .models import Event, Asset
-from .forms import EventCreationForm
+from .forms import EventCreationForm, AssetCreationForm
 from django.views.generic import ListView, DetailView # new
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -20,15 +20,14 @@ class AssetListView(ListView):
     template_name = 'Assets_list.html'
 
 
-# class AssetCreateView(LoginRequiredMixin, CreateView):
-#     model = Asset
-#     form_class = EventCreationForm
-#     template_name = 'event_new.html'
-#     # fields = ('Name', 'Photo', 'starting_date', 'ending_date')
-#
-#     def form_valid(self, form):
-#         form.instance.user = self.request.user
-#         return super().form_valid(form)
+class AssetCreateView(LoginRequiredMixin, CreateView):
+    model = Asset
+    form_class = AssetCreationForm
+    template_name = 'Asset_new.html'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 
 class EventListView(ListView):
@@ -47,20 +46,37 @@ class EventCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-class EventDetailView(DetailView): # new
+class EventDetailView(DetailView):
     model = Event
     template_name = 'event_detail.html'
 
 
-class EventUpdateView(UpdateView): # new
+class EventUpdateView(UpdateView):
     model = Event
     form_class = EventCreationForm
     template_name = 'event_edit.html'
 
 
-class EventDeleteView(DeleteView): # new
+class EventDeleteView(DeleteView):
     model = Event
     template_name = 'event_delete.html'
     success_url = reverse_lazy('events')
+
+
+class AssetDetailView(DetailView):
+    model = Asset
+    template_name = 'Asset_detail.html'
+
+
+class AssetUpdateView(UpdateView):
+    model = Asset
+    form_class = AssetCreationForm
+    template_name = 'Asset_edit.html'
+
+
+class AssetDeleteView(DeleteView):
+    model = Asset
+    template_name = 'Asset_delete.html'
+    success_url = reverse_lazy('Assets_list')
 
 

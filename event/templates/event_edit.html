@@ -1,8 +1,7 @@
 {% extends '_base.html' %}
 {% load static %}
 {% block content %}
-<div class="m-6">
-  <h1 class="text-4xl font-bold text-black">Create Event</h1>
+  <h1 class="text-4xl font-bold text-black">Edit Event</h1>
   <form class="creationForm my-6 w-2/3" method="post"  enctype="multipart/form-data">{% csrf_token %}
     <div class="creationForm grid grid-cols-2 ">
          {{ form.non_field_errors }}
@@ -26,7 +25,7 @@
         </div>
         <div class="fieldWrapper p-4">
             {{ form.ending_date.errors }}
-            <label class="block" for="{{ form.ending_date.id_for_label }}">Ending Date:</label>
+            <label class="block" for="{{ form.ending_date.id_for_label }}">End Date:</label>
             {{ form.ending_date }}
         </div>
               <div class="fieldWrapper p-4">
@@ -44,6 +43,6 @@
         <button class="bg-purple-800 text-white px-16 py-3 rounded outline-none block" type="submit">Update</button>
 </div>
   </form>
-</div>
+
 
 {% endblock content %}

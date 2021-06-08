@@ -1,0 +1,17 @@
+{% extends '_base.html' %}
+
+{% block content %}
+  <div class="article-entry">
+      {% if object.featured_image %}
+     <img class="bookcover" src="{{ object.featured_image.url }}">
+        {% endif %}
+      <h2>{{ object.code }}</h2>
+      <p> <span class="text-muted"> Expiry date: {{ object.Expiry_date }} | Expiry time: {{ object.Expiry_time }}</span></p>
+      <p>Google maps link {{ object.Google_maps_link }}</p>
+      <p>ASSETS_TYPE {{object.ASSETS_TYPE}}</p>
+  </div>
+
+  <p><a href="{% url 'Asset_edit' asset.id %}">Edit</a> |
+    <a href="{% url 'Asset_delete' asset.id %}">Delete</a></p>
+  <p>Back to <a href="{% url 'Assets_list' %}">All Articles</a>.</p>
+{% endblock content %}

@@ -16,7 +16,7 @@
       </div>
       <div class="card-body">
           Locations
-          {% for loc in event.Locations.objects.all %}
+          {% for loc in event.Locations.all %}
           <span>{{ loc.Location }}</span>
           {% endfor %}
       </div>

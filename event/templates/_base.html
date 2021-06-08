@@ -29,13 +29,16 @@
                  <a href="{% url 'events' %}">Events</a> | <a href="{% url 'event_new' %}">+ New </a>
              </li>
              <li>
-                 <a href="{% url 'Assets_list' %}">Assets</a> | <a href="{% url 'event_new' %}">+ New </a>
+                 <a href="{% url 'Assets_list' %}">Assets</a> | <a href="{% url 'Asset_new' %}">+ New </a>
              </li>
          </ul>
       </nav>
      <div class="container">
+         <div class="m-6">
+
     {% block content %}
     {% endblock content %}
+         </div>
   </div>
   </div>
 

@@ -1,0 +1,50 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block content %}
+<div class="m-6">
+  <h1 class="text-4xl font-bold text-black">Create Asset</h1>
+  <form class="creationForm my-6 w-2/3" method="POST"  enctype="multipart/form-data">{% csrf_token %}
+    <div class="creationForm grid grid-cols-2 ">
+         {{ form.non_field_errors }}
+        <div class="fieldWrapper p-4">
+            {{ form.code.errors }}
+            <label class="block" for="{{ form.code.id_for_label }}">Code:</label>
+            {{ form.code }}
+        </div>
+         <div class="fieldWrapper p-4">
+            {{ form.Google_maps_link.errors }}
+            <label class="block" for="{{ form.Google_maps_link.id_for_label }}">Google maps link:</label>
+            {{ form.Google_maps_link }}
+        </div>
+        <div class="fieldWrapper p-4">
+            {{ form.featured_image.errors }}
+            <label class="block" for="{{ form.featured_image.id_for_label }}">
+                Image:
+            </label>
+            {{ form.featured_image }}
+
+        </div>
+        <div class="fieldWrapper p-4">
+            {{ form.ASSETS_TYPE.errors }}
+            <label class="block" for="{{ form.ASSETS_TYPE.id_for_label }}">Asset type:</label>
+            {{ form.ASSETS_TYPE }}
+        </div>
+        <div class="fieldWrapper p-4">
+            {{ form.Expiry_date.errors }}
+            <label class="block" for="{{ form.Expiry_date.id_for_label }}">Expiry Date:</label>
+            {{ form.Expiry_date }}
+        </div>
+              <div class="fieldWrapper p-4">
+            {{ form.Expiry_time.errors }}
+            <label class="block" for="{{ form.Expiry_time.id_for_label }}">Expiry time:</label>
+            {{ form.Expiry_time }}
+        </div>
+
+    </div>
+<div class="p-4 flex justify-end">
+        <button class="bg-purple-800 text-white px-16 py-3 rounded outline-none block" type="submit">Save</button>
+</div>
+  </form>
+</div>
+
+{% endblock content %}

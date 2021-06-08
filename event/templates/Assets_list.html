@@ -11,15 +11,15 @@
 {% endif %}
 
       <div class="card-header">
-        <span class="font-weight-bold">{{ asset.code }}</span> &middot;<br>
-        <span class="text-muted">Expiry_date: {{ asset.Expiry_date }} | Expiry_time: {{ asset.Expiry_time }}  </span>
+       <a href="{% url 'Asset_detail' asset.id %}" class="font-weight-bold">{{ asset.code }}</a> &middot;<br>
+        <span class="text-muted">Expiry_date: {{ asset.Expiry_date }} <br> Expiry_time: {{ asset.Expiry_time }}  </span>
       </div>
       <div class="card-body">
-       ASSETS_TYPE: {{ asset.ASSETS_TYPE }}
-          Google_maps_link: {{ asset.Google_maps_link }}
+       ASSETS TYPE: {{ asset.ASSETS_TYPE }} <br>
+          Google maps link: {{ asset.Google_maps_link }}
       </div>
       <div class="card-footer text-center text-muted">
-        <a href="#">Edit</a> | <a href="#">Delete</a>
+        <a href="{% url 'Asset_edit' asset.id %}">Edit</a> | <a href="{% url 'Asset_delete' asset.id %}">Delete</a>
       </div>
     </div>
 
