@@ -1,0 +1,56 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block content %}
+  <h1 class="text-4xl font-bold text-black">Create Location</h1>
+  <form class="creationForm my-6 w-2/3" method="POST"  enctype="multipart/form-data">{% csrf_token %}
+    <div class="creationForm grid grid-cols-2 ">
+         {{ form.non_field_errors }}
+        <div class="fieldWrapper p-4">
+            {{ form.Name.errors }}
+            <label class="block" for="{{ form.Name.id_for_label }}">Name:</label>
+            {{ form.Name }}
+        </div>
+        <div class="fieldWrapper p-4">
+            {{ form.Longitude.errors }}
+            <label class="block" for="{{ form.Longitude.id_for_label }}">
+                Longitude:
+            </label>
+            {{ form.Longitude }}
+
+        </div>
+                <div class="fieldWrapper p-4">
+            {{ form.Latitude.errors }}
+            <label class="block" for="{{ form.Latitude.id_for_label }}">
+                Latitude:
+            </label>
+            {{ form.Latitude }}
+
+        </div>
+         <div class="fieldWrapper p-4">
+            {{ form.Google_maps_link.errors }}
+            <label class="block" for="{{ form.Google_maps_link.id_for_label }}">Google maps link:</label>
+            {{ form.Google_maps_link }}
+        </div>
+        <div class="fieldWrapper p-4">
+            {{ form.Plus_code.errors }}
+            <label class="block" for="{{ form.Plus_code.id_for_label }}">Asset type:</label>
+            {{ form.Plus_code }}
+        </div>
+        <div class="fieldWrapper p-4">
+            {{ form.Radius.errors }}
+            <label class="block" for="{{ form.Radius.id_for_label }}">Radius:</label>
+            {{ form.Radius }}
+        </div>
+              <div class="fieldWrapper p-4">
+            {{ form.Assets.errors }}
+            <label class="block" for="{{ form.Assets.id_for_label }}">Assets:</label>
+            {{ form.Assets }}
+        </div>
+
+    </div>
+<div class="p-4 flex justify-end">
+        <button class="bg-purple-800 text-white px-16 py-3 rounded outline-none block" type="submit">Save</button>
+</div>
+  </form>
+
+{% endblock content %}

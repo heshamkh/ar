@@ -1,0 +1,27 @@
+{% extends '_base.html' %}
+
+{% block title %}Locations{% endblock title %}
+
+{% block content %}
+<div class="grid grid-cols-3 gap-4 w-5/6 pl-6 pt-6">
+  {% for location in object_list %}
+    <div class="card">
+
+
+      <div class="card-header">
+       <a href="{% url 'location_detail' location.id %}" class="font-weight-bold">{{ location.Name }}</a> &middot;<br>
+        <span class="text-muted">Longitude: {{ location.Longitude }} <br> Latitude: {{ location.Latitude }}  </span>
+      </div>
+      <div class="card-body">
+       Plus code: {{ location.Plus_code }} <br>
+          Google maps link: {{ location.Google_maps_link }}<br>
+          Radius : {{ location.Radius }}
+      </div>
+      <div class="card-footer text-center text-muted">
+        <a href="{% url 'location_edit' location.id %}">Edit</a> | <a href="{% url 'location_delete' location.id %}">Delete</a>
+      </div>
+    </div>
+
+  {% endfor %}
+</div>
+{% endblock content %}

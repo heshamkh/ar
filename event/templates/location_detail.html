@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+{% block content %}
+  <div class="article-entry">
+      <h2>{{ object.Name }}</h2>
+      <p> <span class="text-muted">Longitude: {{ object.Longitude }} <br> Latitude: {{ object.Latitude }}</span></p>
+      <p>Google maps link : {{ object.Google_maps_link }}</p>
+      <p>Plus code : {{object.Plus_code}}</p>
+      <p>Radius : {{object.Radius}}</p>
+      <p>Assets : {{object.Assets}}</p>
+  </div>
+
+  <p><a href="{% url 'location_edit' location.id %}">Edit</a> |
+    <a href="{% url 'location_delete' location.id %}">Delete</a></p>
+  <p>Back to <a href="{% url 'location_list' %}">All Articles</a>.</p>
+{% endblock content %}

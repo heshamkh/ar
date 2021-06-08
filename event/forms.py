@@ -48,3 +48,26 @@ class AssetCreationForm(forms.ModelForm):
     featured_image = forms.ImageField()
 
     ASSETS_TYPE = forms.Select()
+
+
+class LocationCreationForm(forms.ModelForm):
+
+    class Meta:
+        model = Location
+        fields = ['Name', 'Longitude', 'Latitude', 'Google_maps_link', 'Plus_code', 'Radius', 'Assets']
+        widgets = {
+            'Expiry_date': forms.DateInput(format=('%Y-%m-%d'),
+                                             attrs={'class': 'datepicker1', 'placeholder': 'Select Date', 'type': 'date'}),
+            'Expiry_time': forms.TimeInput(format='%H:%M',attrs={'type': 'time'}),
+        }
+
+    code = forms.CharField()
+    Longitude=forms.NumberInput()
+    Latitude = forms.NumberInput()
+    Radius = forms.NumberInput()
+    Google_maps_link = forms.CharField()
+    Plus_code = forms.CharField()
+    Assets = forms.ModelMultipleChoiceField(
+        queryset=Asset.objects.all(),
+        widget=forms.CheckboxSelectMultiple
+    )
