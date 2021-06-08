@@ -12,10 +12,13 @@
 
       <div class="card-header">
         <a href="{% url 'event_detail' event.id %}" class="font-weight-bold">{{ event.Name }}</a> &middot;<br>
-        <span class="text-muted"> Starting date: {{ event.Starting_date }} | Ending date: {{ event.Ending_date }}</span>
+        <span class="text-muted"> Starting date: {{ event.starting_date }} <br> Ending date: {{ event.ending_date }}</span>
       </div>
       <div class="card-body">
-       Locations {{ event.Locations }}
+          Locations
+          {% for loc in event.Locations.objects.all %}
+          <span>{{ loc.Location }}</span>
+          {% endfor %}
       </div>
       <div class="card-footer text-center text-muted">
         <a href="{% url 'event_edit' event.id %}">Edit</a> | <a href="{% url 'event_delete' event.id %}">Delete</a>

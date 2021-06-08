@@ -16,6 +16,4 @@ urlpatterns = [
     path('<pk>/edit/', EventUpdateView.as_view(), name='event_edit'), # new
     path('<pk>/',EventDetailView.as_view(), name='event_detail'), # new
     path('<pk>/delete/',EventDeleteView.as_view(), name='event_delete'), # new
-
-
 ]
