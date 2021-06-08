@@ -17,22 +17,38 @@
 <body>
   <header>
     <!-- Fixed navbar -->
-    <div class="d-flex flex-column flex-md-row align-items-center p-6 my-3 bg-white border-bottom shadow-sm">
-      <a href="{% url 'home' %}" class="navbar-brand my-0 font-bold"><span class="rounded-xl bg-purple-300 text-purple-800 p-4 mx-3">Dz</span> <span class="font-bold">DazShop</span></a>
+    <div class="flex justify-between align-items-center p-6 my-3 bg-white border-bottom shadow-sm">
+            <a href="{% url 'home' %}" class="navbar-brand my-0 font-bold block flex">
+                <div class="rounded-xl bg-purple-300 text-purple-800 p-4 mx-3">Dz</div>
+                <div class="font-bold  flex flex-col justify-center">DazShop</div>
+            </a>
 
+    {% if user.is_authenticated %}
+        <div class="flex">
+            <div class="w-14 h-14 bg-gray-300 rounded-full mr-3"></div>
+            <div>
+              <p class="font-semibold text-lg capitalized">{{ user.username }}</p><p class="text-sm text-gray-300">{{ user.email }}</p>
+            </div>
+
+        </div>
+<!--        <p><a href="#">Log out</a></p>-->
+
+      {% else %}
+        <a href="#">Log In</a>
+      {% endif %}
     </div>
   </header>
   <div class="flex flex-row">
-     <nav class="w-1/5 border-r-2 text-center">
+     <nav class="w-1/5 border-r-2 pl-16">
          <ul>
-             <li>
-                 <a href="{% url 'events' %}">Events</a> | <a href="{% url 'event_new' %}">+ New </a>
+             <li class="my-6">
+                 <a class="font-semibold text-md" href="{% url 'events' %}">Events</a>  <a class="text-sm" href="{% url 'event_new' %}">+New </a>
              </li>
-             <li>
-                 <a href="{% url 'Assets_list' %}">Assets</a> | <a href="{% url 'Asset_new' %}">+ New </a>
+             <li class="my-6">
+                 <a class="font-semibold text-md" href="{% url 'Assets_list' %}">Assets</a>  <a class="text-sm" href="{% url 'Asset_new' %}">+New </a>
              </li>
-             <li>
-                 <a href="{% url 'location_list' %}">Locations</a> | <a href="{% url 'location_new' %}">+ New </a>
+             <li class="my-6">
+                 <a class="font-semibold text-md" href="{% url 'location_list' %}">Locations</a>  <a class="text-sm" href="{% url 'location_new' %}">+New </a>
              </li>
          </ul>
       </nav>
