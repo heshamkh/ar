@@ -139,7 +139,7 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 TAILWIND_APP_NAME = 'theme'
-MEDIA_ROOT = str(BASE_DIR.joinpath('covers'))
+MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
 MEDIA_URL = '/media/'
 
 # NPM_BIN_PATH = 'C:\\Program Files\\nodejs\\npm.cmd'
