@@ -83,7 +83,7 @@ class LocationCreationForm(forms.ModelForm):
             # The widget for a ModelMultipleChoiceField expects
             # a list of primary key for the selected data.
             initial['locations'] = [t.pk for t in
-                                  kwargs['location'].location_set.all()]
+                                  kwargs['locations'].location_set.all()]
 
         forms.ModelForm.__init__(self, *args, **kwargs)
 
@@ -100,7 +100,7 @@ class LocationCreationForm(forms.ModelForm):
             # This is where we actually link the pizza with toppings
             instance.location_set.clear()
             for location in self.cleaned_data['locations']:
-                instance.course_set.add(location)
+                instance.location_set.add(location)
 
         self.save_m2m = save_m2m
 
