@@ -1,7 +1,10 @@
 from django.db import models
 import uuid
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from django.urls import reverse
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
 
 
 class Asset(models.Model):
@@ -70,7 +73,6 @@ class Event(models.Model):
         editable=False)
     Name = models.CharField(max_length=200)
     Photo = models.ImageField( blank=True,null=True)
-
     starting_date = models.DateField(null=True)
     ending_date = models.DateField(null=True)
     user = models.ForeignKey(
@@ -85,6 +87,8 @@ class Event(models.Model):
 
     def get_absolute_url(self):
         return reverse('events')
+
+
 
 
 

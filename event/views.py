@@ -62,6 +62,7 @@ class EventDeleteView(DeleteView):
     success_url = reverse_lazy('events')
 
 
+
 class AssetDetailView(DetailView):
     model = Asset
     template_name = 'Asset_detail.html'

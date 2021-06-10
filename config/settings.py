@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+# import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -42,8 +42,10 @@ INSTALLED_APPS = [
     'crispy_tailwind',
     'event',
     'tailwind',
-    'theme'
+    'theme',
+    'accounts'
 ]
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -60,7 +62,8 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [str(BASE_DIR.joinpath('templates'))],
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -148,3 +151,5 @@ CRISPY_TEMPLATE_PACK = 'tailwind'
 # NPM_BIN_PATH='docker.io/library/node'
 
 
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
