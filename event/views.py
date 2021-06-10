@@ -39,7 +39,6 @@ class EventCreateView(LoginRequiredMixin, CreateView):
     model = Event
     form_class = EventCreationForm
     template_name = 'event_new.html'
-    # fields = ('Name', 'Photo', 'starting_date', 'ending_date')
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -85,7 +84,7 @@ class LocationListView(ListView):
     template_name = 'location_list.html'
 
 
-class LocationCreateView(LoginRequiredMixin, CreateView):
+class LocationCreateView( CreateView):
     model = Location
     form_class = LocationCreationForm
     template_name = 'location_new.html'

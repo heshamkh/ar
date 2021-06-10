@@ -58,6 +58,9 @@ class Location(models.Model):
     def __str__(self):
         return self.Name
 
+    def get_absolute_url(self):
+        return reverse('location_list')
+
 
 class Event(models.Model):
     id = models.UUIDField(

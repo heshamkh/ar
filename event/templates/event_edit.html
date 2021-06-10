@@ -1,48 +1,15 @@
 {% extends '_base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block content %}
   <h1 class="text-4xl font-bold text-black">Edit Event</h1>
-  <form class="creationForm my-6 w-2/3" method="post"  enctype="multipart/form-data">{% csrf_token %}
-    <div class="creationForm grid grid-cols-2 ">
-         {{ form.non_field_errors }}
-        <div class="fieldWrapper p-4">
-            {{ form.Name.errors }}
-            <label class="block" for="{{ form.Name.id_for_label }}">Name:</label>
-            {{ form.Name }}
-        </div>
-        <div class="fieldWrapper p-4">
-            {{ form.Photo.errors }}
-            <label class="block" for="{{ form.Photo.id_for_label }}">
-                Image:
-            </label>
-            {{ form.Photo }}
-
-        </div>
-        <div class="fieldWrapper p-4">
-            {{ form.starting_date.errors }}
-            <label class="block" for="{{ form.starting_date.id_for_label }}">Start Date:</label>
-            {{ form.starting_date }}
-        </div>
-        <div class="fieldWrapper p-4">
-            {{ form.ending_date.errors }}
-            <label class="block" for="{{ form.ending_date.id_for_label }}">End Date:</label>
-            {{ form.ending_date }}
-        </div>
-              <div class="fieldWrapper p-4">
-            {{ form.Locations.errors }}
-            <label class="block" for="{{ form.Locations.id_for_label }}">Locations:</label>
-            {{ form.Locations }}
-        </div>
-         <div class="fieldWrapper p-4">
-            {{ form.Assets.errors }}
-            <label class="block" for="{{ form.Assets.id_for_label }}">Assets:</label>
-            {{ form.Assets }}
-        </div>
-    </div>
+  <form class="creationForm my-6 w-2/3" method="POST"  enctype="multipart/form-data">{% csrf_token %}
+      <div class="creationForm grid grid-cols-2 gap-4">
+          {{ form|crispy }}
+      </div>
 <div class="p-4 flex justify-end">
         <button class="bg-purple-800 text-white px-16 py-3 rounded outline-none block" type="submit">Update</button>
 </div>
   </form>
-
 
 {% endblock content %}

@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    'crispy_forms',
+    'crispy_tailwind',
     'event',
     'tailwind',
     'theme'
@@ -141,7 +143,7 @@ STATICFILES_FINDERS = [
 TAILWIND_APP_NAME = 'theme'
 MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
 MEDIA_URL = '/media/'
-
+CRISPY_TEMPLATE_PACK = 'tailwind'
 # NPM_BIN_PATH = 'C:\\Program Files\\nodejs\\npm.cmd'
 # NPM_BIN_PATH='docker.io/library/node'
 
