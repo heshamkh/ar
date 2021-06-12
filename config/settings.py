@@ -152,5 +152,5 @@ CRISPY_TEMPLATE_PACK = 'tailwind'
 # NPM_BIN_PATH='docker.io/library/node'
 
 
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'events'
+LOGOUT_REDIRECT_URL = 'login'
