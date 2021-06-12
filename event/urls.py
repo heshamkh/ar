@@ -18,8 +18,7 @@ from .views import ( HomePageView,
                      LocationDeleteView,)
 urlpatterns = [
     # path('about/', AboutPageView.as_view(), name='about'), # new
-    path('', HomePageView.as_view(), name='home'),
-    path('events/', EventListView.as_view(), name='events'),
+    path('', EventListView.as_view(), name='events'),
     path('assets/', AssetListView.as_view(), name='Assets_list'),
     path('locations/', LocationListView.as_view(), name='location_list'),
     path('new_event/', EventCreateView.as_view(), name='event_new'),

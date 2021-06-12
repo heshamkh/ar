@@ -12,7 +12,7 @@ from django.contrib.auth.mixins import (
 
 
 class HomePageView(TemplateView):
-    template_name = 'home.html'
+    template_name = 'events.html'
 
 
 class AssetListView(ListView):
