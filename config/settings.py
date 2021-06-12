@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'event',
     'tailwind',
     'theme',
-    'accounts'
+    'accounts',
+    'phonenumber_field',
 ]
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
