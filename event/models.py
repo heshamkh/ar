@@ -72,7 +72,7 @@ class Event(models.Model):
         default=uuid.uuid4,
         editable=False)
     Name = models.CharField(max_length=200)
-    Photo = models.ImageField( blank=True,null=True)
+    Photo = models.ImageField(upload_to='covers/', blank=True,null=True)
     starting_date = models.DateField(null=True)
     ending_date = models.DateField(null=True)
     user = models.ForeignKey(

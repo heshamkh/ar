@@ -18,7 +18,7 @@
   <header>
     <!-- Fixed navbar -->
     <div class="flex justify-between align-items-center p-6 bg-white border-bottom shadow-sm">
-            <a href="{% url 'home' %}" class="navbar-brand my-0 font-bold block flex" style="align-items: center;">
+            <a href="{% url 'home' %}" class="navbar-brand my-0 font-bold block flex">
                 <div class="rounded-xl bg-purple-300 text-purple-800 p-4 mx-3">Dz</div>
                 <div class="font-bold  flex flex-col justify-center">DazShop</div>
             </a>
@@ -41,28 +41,14 @@
 
       {% else %}
         <div class="flex flex-row " style="align-items: center;">
-            <a class="bg-purple-800 text-white px-6 py-0.5 h-8 rounded outline-none mx-2 block " href="{% url 'login' %}">Log In</a>
+<!--            <a class="bg-purple-800 text-white px-6 py-0.5 h-8 rounded outline-none mx-2 block " href="{% url 'login' %}">Log In</a>-->
             <a class="bg-purple-800 text-white px-6 py-0.5 h-8 rounded outline-none mx-2 block" href="{% url 'signup' %}">Sign Up</a>
         </div>
       {% endif %}
     </div>
   </header>
-  <div class="flex flex-row">
-     <nav class="w-1/5 border-r-2 pl-16">
-         <ul>
-             <li class="my-6">
-                 <a class="font-semibold text-md" href="{% url 'events' %}">Events</a>  <a class="text-sm" href="{% url 'event_new' %}">+New </a>
-             </li>
-             <li class="my-6">
-                 <a class="font-semibold text-md" href="{% url 'Assets_list' %}">Assets</a>  <a class="text-sm" href="{% url 'Asset_new' %}">+New </a>
-             </li>
-             <li class="my-6">
-                 <a class="font-semibold text-md" href="{% url 'location_list' %}">Locations</a>  <a class="text-sm" href="{% url 'location_new' %}">+New </a>
-             </li>
-         </ul>
-      </nav>
      <div class="container">
-         <div class="m-6">
+         <div class="max-w-xl mx-auto my-32">
 
     {% block content %}
     {% endblock content %}
