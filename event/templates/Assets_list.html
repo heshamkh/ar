@@ -7,7 +7,7 @@
   {% for asset in object_list %}
     <div class="card">
       {% if asset.featured_image %}
-     <img class="bookcover" src="{{ asset.featured_image.url }}">
+     <img class="w-full h-64 object-cover object-center" src="{{ asset.featured_image.url }}">
 {% endif %}
 
       <div class="card-header">
