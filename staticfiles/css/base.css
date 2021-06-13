@@ -27,6 +27,6 @@ input[type=checkbox] {
     width: auto;
     border-radius: 3px;
 }
-/*#div_id_code{
+.profileEditForm #div_id_password{
     display: none;
-}*/
+}

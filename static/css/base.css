@@ -27,6 +27,11 @@ input[type=checkbox] {
     width: auto;
     border-radius: 3px;
 }
-/*#div_id_code{
+.profileEditForm #div_id_password{
     display: none;
-}*/
+}
+.locationTable tr:nth-child(even) {background-color: #f6f6f6;}
+.locationTable th, .locationTable td {
+  text-align: left;
+  padding: 8px;
+}
