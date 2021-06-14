@@ -11,7 +11,7 @@
 {% endif %}
 
       <div class="card-header">
-       <a href="{% url 'Asset_detail' asset.id %}" class="font-weight-bold">{{ asset.code }}</a> &middot;<br>
+       <a href="{% url 'Asset_detail' asset.id %}" class="font-bold">{{ asset.code }}</a> &middot;<br>
         <span class="text-muted">Expiry_date: {{ asset.Expiry_date }} <br> Expiry_time: {{ asset.Expiry_time }}  </span>
       </div>
       <div class="card-body">
