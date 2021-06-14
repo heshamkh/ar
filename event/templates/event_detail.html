@@ -29,16 +29,16 @@
         <div
           class="flex flex-row px-4 py-2 text-xs font-bold text-purple-800 bg-white rounded-md "
         >
-          <span class="mr-2 font-normal text-gray-500">Organizer :</span>
-          <p class="font-semibold text-purple-800 capitalize">{{ object.user }}</p>
+          <span class="mr-2 font-normal text-gray-500">Event Name :</span>
+          <p class="font-semibold text-purple-800 capitalize">{{ object.Name }}</p>
         </div>
       </div>
       <div class="absolute self-end mr-1 mt-1">
         <p
           class="px-4 py-2 text-xs font-bold text-purple-800 bg-white rounded-md "
         >
-          <span class="font-normal text-gray-500">Event Name :</span>
-          {{ object.Name }}
+          <span class="font-normal text-gray-500">Organizer :</span>
+            {{ object.user }}
         </p>
       </div>
       <div class="absolute bottom-0 flex flex-col w-full h-28">
@@ -72,11 +72,11 @@
 			c1.875,3.396,5.448,5.5,9.333,5.5s7.458-2.104,9.333-5.5l140.896-254.813c13.375-24.76,20.438-52.771,20.438-81.021
 			C426.667,76.563,350.104,0,256,0z M256,256c-47.052,0-85.333-38.281-85.333-85.333c0-47.052,38.281-85.333,85.333-85.333
 			s85.333,38.281,85.333,85.333C341.333,217.719,303.052,256,256,256z"/>
-</svg>Locations :</p>
-
+</svg>
+                  Locations :</p>
                 <ul class="text-xs font-semibold text-purple-800">
               {% for loc in object.Locations.all %}
-              <li>{{ loc }}</li>
+              <li>{{ loc.Longitude }}</li>
               {% endfor %}
           </ul>
 
