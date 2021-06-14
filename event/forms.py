@@ -5,6 +5,18 @@ from .models import Event, Location, Asset
 
 
 class EventCreationForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        """ Grants access to the request object so that only members of the current user
+        are given as options"""
+
+        self.request = kwargs.pop('request')
+        super(EventCreationForm, self).__init__(*args, **kwargs)
+
+        self.fields['Locations'].queryset = Location.objects.filter(
+            user=self.request.user)
+
+        self.fields['Assets'].queryset = Asset.objects.filter(
+            user=self.request.user)
 
     class Meta:
         model = Event
@@ -20,11 +32,16 @@ class EventCreationForm(forms.ModelForm):
     Photo = forms.ImageField()
 
     Locations = forms.ModelMultipleChoiceField(
-        queryset=Location.objects.all(),
+        queryset=None,
         widget=forms.CheckboxSelectMultiple
     )
-    Assets=forms.ModelMultipleChoiceField(
-        queryset=Asset.objects.all(),
+
+    # Locations = forms.ModelMultipleChoiceField(
+    #     queryset=Location.objects.all(),
+    #     widget=forms.CheckboxSelectMultiple
+    # )
+    Assets = forms.ModelMultipleChoiceField(
+        queryset=None,
         widget=forms.CheckboxSelectMultiple
     )
 
@@ -50,6 +67,17 @@ class AssetCreationForm(forms.ModelForm):
 
 class LocationCreationForm(forms.ModelForm):
 
+    def __init__(self, *args, **kwargs):
+        """ Grants access to the request object so that only members of the current user
+        are given as options"""
+
+        self.request = kwargs.pop('request')
+        super(LocationCreationForm, self).__init__(*args, **kwargs)
+
+        self.fields['Assets'].queryset = Asset.objects.filter(
+            user=self.request.user)
+
+
     class Meta:
         model = Location
         fields = ['Name', 'Longitude', 'Latitude', 'Google_maps_link', 'Plus_code', 'Radius', 'Assets']
@@ -59,12 +87,13 @@ class LocationCreationForm(forms.ModelForm):
             'Expiry_time': forms.TimeInput(format='%H:%M',attrs={'type': 'time'}),
         }
 
-    Longitude=forms.NumberInput()
+    Longitude = forms.NumberInput()
     Latitude = forms.NumberInput()
     Radius = forms.NumberInput()
     Google_maps_link = forms.CharField()
     Plus_code = forms.CharField()
+
     Assets = forms.ModelMultipleChoiceField(
-        queryset=Asset.objects.all(),
+        queryset=None,
         widget=forms.CheckboxSelectMultiple
     )
