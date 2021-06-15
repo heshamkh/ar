@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 # import os
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = '5_fzp%ibq*#l5ofy1lucm0i2d79jw=(2h1wvoaq75z(8+6jn)5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['https://arlocations.herokuapp.com/']
 
 
 # Application definition
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -154,3 +156,6 @@ CRISPY_TEMPLATE_PACK = 'tailwind'
 
 LOGIN_REDIRECT_URL = 'events'
 LOGOUT_REDIRECT_URL = 'login'
+
+prod_db  =  dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
