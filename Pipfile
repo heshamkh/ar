@@ -17,15 +17,10 @@ django-crispy-forms = "*"
 crispy-tailwind = "*"
 django-phonenumber-field = {extras = ["phonenumbers"], version = "*"}
 qrcode = "*"
-<<<<<<< HEAD
 dj-database-url = "*"
-=======
 environs = {version = "==8.0.0", extras = ["django"]}
 whitenoise = "==5.1.0"
 gunicorn = "==20.0.4"
->>>>>>> bce535a9a85cf5212dd3fbcc66bdf3b80bf31228
-
 [dev-packages]
-
 [requires]
 python_version = "3.8"
