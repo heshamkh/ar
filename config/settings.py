@@ -12,14 +12,12 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 # import os
 import os
 from pathlib import Path
-<<<<<<< HEAD
 # import dj_database_url
 
-=======
 from environs import Env # new
 env = Env() # new
 env.read_env() # new
->>>>>>> bce535a9a85cf5212dd3fbcc66bdf3b80bf31228
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -28,7 +26,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
 # SECRET_KEY = '5_fzp%ibq*#l5ofy1lucm0i2d79jw=(2h1wvoaq75z(8+6jn)5'
 SECRET_KEY = os.environ.get('SECRET_KEY', default='foo')
 
@@ -37,7 +34,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='foo')
 DEBUG = int(os.environ.get('DEBUG', default=0))
 
 ALLOWED_HOSTS = ['https://arlocations.herokuapp.com/']
-=======
+
 SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 # DEBUG = True
@@ -45,7 +42,6 @@ DEBUG = env.bool("DJANGO_DEBUG")
 # SECURITY WARNING: don't run with debug turned on in production!
 
 ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
->>>>>>> bce535a9a85cf5212dd3fbcc66bdf3b80bf31228
 
 
 # Application definition
@@ -184,12 +180,9 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 LOGIN_REDIRECT_URL = 'events'
-<<<<<<< HEAD
-LOGOUT_REDIRECT_URL = 'login'
 
 # prod_db = dj_database_url.config(conn_max_age=500)
 # DATABASES['default'].update(prod_db)
-=======
 LOGOUT_REDIRECT_URL = 'home'
 SECURE_SSL_REDIRECT = env.bool("DJANGO_SECURE_SSL_REDIRECT", default=True)
 SECURE_HSTS_SECONDS = env.int("DJANGO_SECURE_HSTS_SECONDS", default=2592000)
@@ -197,4 +190,3 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = env.bool("DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS
 SECURE_HSTS_PRELOAD = env.bool("DJANGO_SECURE_HSTS_PRELOAD", default=True)
 SESSION_COOKIE_SECURE = env.bool("DJANGO_SESSION_COOKIE_SECURE", default=True)
 CSRF_COOKIE_SECURE = env.bool("DJANGO_CSRF_COOKIE_SECURE", default=True)
->>>>>>> bce535a9a85cf5212dd3fbcc66bdf3b80bf31228
