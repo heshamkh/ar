@@ -15,7 +15,7 @@ services:
     environment:
       - "DJANGO_SECRET_KEY=5_fzp%ibq*#l5ofy1lucm0i2d79jw=(2h1wvoaq75z(8+6jn)5"
       - "DJANGO_DEBUG=False"
-      - "DJANGO_SECURE_SSL_REDIRECT=False"
+      - "DJANGO_SECURE_SSL_REDIRECT=False" # new
       - "DJANGO_SECURE_HSTS_SECONDS=0" # new
       - "DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS=False" # new
       - "DJANGO_SECURE_HSTS_PRELOAD=False" # new
@@ -24,6 +24,8 @@ services:
 
   db:
     image: postgres:11
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
     environment:
       - "POSTGRES_HOST_AUTH_METHOD=trust"
 
