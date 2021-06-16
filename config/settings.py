@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='foo')
 # DEBUG = True
 DEBUG = int(os.environ.get('DEBUG', default=0))
 
-ALLOWED_HOSTS = ['https://arlocations.herokuapp.com/']
+# ALLOWED_HOSTS = ['https://arlocations.herokuapp.com/']
 
 # SECRET_KEY = env("DJANGO_SECRET_KEY")
 
@@ -103,20 +103,20 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'heshamkh12',
-        'HOST': 'localhost',
-        'PORT': 5000
-    }
-}
-#
 # DATABASES = {
-#     "default": env.dj_db_url("DATABASE_URL", default="postgres://postgres@db/postgres")
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': 'heshamkh12',
+#         'HOST': 'localhost',
+#         'PORT': 5000
+#     }
 # }
+#
+DATABASES = {
+    "default": env.dj_db_url("DATABASE_URL", default="postgres://postgres@db/postgres")
+}
 
 
 # Password validation
@@ -171,7 +171,7 @@ MEDIA_URL = '/media/'
 CRISPY_TEMPLATE_PACK = 'tailwind'
 # NPM_BIN_PATH = 'C:\\Program Files\\nodejs\\npm.cmd'
 # NPM_BIN_PATH='docker.io/library/node'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 LOGIN_REDIRECT_URL = 'events'
