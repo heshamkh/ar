@@ -32,7 +32,7 @@ class EventCreationForm(forms.ModelForm):
     Photo = forms.ImageField()
 
     Locations = forms.ModelMultipleChoiceField(
-        queryset=None,
+        queryset=Location.objects.all(),
         widget=forms.CheckboxSelectMultiple
     )
 
@@ -41,7 +41,7 @@ class EventCreationForm(forms.ModelForm):
     #     widget=forms.CheckboxSelectMultiple
     # )
     Assets = forms.ModelMultipleChoiceField(
-        queryset=None,
+        queryset=Asset.objects.all(),
         widget=forms.CheckboxSelectMultiple
     )
 
@@ -93,7 +93,9 @@ class LocationCreationForm(forms.ModelForm):
     Google_maps_link = forms.CharField()
     Plus_code = forms.CharField()
 
+
+
     Assets = forms.ModelMultipleChoiceField(
-        queryset=None,
+        queryset=Asset.objects.all(),
         widget=forms.CheckboxSelectMultiple
     )

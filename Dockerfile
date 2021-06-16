@@ -17,4 +17,5 @@ RUN pip install -r /tmp/requirements.txt
 
 
 # Copy project
-COPY . /code/
+#COPY . /code/
+CMD ["python", "base.py"]
