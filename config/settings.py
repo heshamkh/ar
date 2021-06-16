@@ -41,7 +41,7 @@ ALLOWED_HOSTS = ['https://arlocations.herokuapp.com/']
 # DEBUG = env.bool("DJANGO_DEBUG")
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -103,37 +103,19 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'postgres',
-#         'USER': 'postgres',
-#         'PASSWORD': 'heshamkh12',
-#         'HOST': 'localhost',
-#         'PORT': 5000
-#     }
-# }
-
 DATABASES = {
-    "default": env.dj_db_url("DATABASE_URL", default="postgres://postgres@db/postgres")
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'heshamkh12',
+        'HOST': 'localhost',
+        'PORT': 5000
+    }
 }
-
+#
 # DATABASES = {
-#
-#     'default': {
-#
-#         'ENGINE': 'django.db.backends.postgresql',
-#
-#         'NAME': ‘postgres’,
-#
-#         'USER': 'postgres',
-#
-#         'PASSWORD': 'heshamkh12'
-#
-#         'HOST': 'localhost',
-#
-#         'PORT': 5050,
-#      }
+#     "default": env.dj_db_url("DATABASE_URL", default="postgres://postgres@db/postgres")
 # }
 
 import dj_database_url
