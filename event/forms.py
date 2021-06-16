@@ -50,14 +50,14 @@ class AssetCreationForm(forms.ModelForm):
 
     class Meta:
         model = Asset
-        fields = ['code', 'featured_image', 'Google_maps_link', 'ASSETS_TYPE', 'Expiry_date', 'Expiry_time']
+        fields = ['Asset_File', 'featured_image', 'Google_maps_link', 'ASSETS_TYPE', 'Expiry_date', 'Expiry_time']
         widgets = {
             'Expiry_date': forms.DateInput(format=('%Y-%m-%d'),
                                              attrs={'class': 'datepicker1', 'placeholder': 'Select Date', 'type': 'date'}),
             'Expiry_time': forms.TimeInput(format='%H:%M',attrs={'type': 'time'}),
         }
 
-    code = forms.CharField()
+    Asset_File = forms.FileField()
     Google_maps_link = forms.CharField()
 
     featured_image = forms.ImageField()
