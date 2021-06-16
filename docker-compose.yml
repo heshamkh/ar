@@ -25,5 +25,5 @@ services:
   db:
     image: postgres:11
     environment:
-      - "POSTGRES_HOST_AUTH_METHOD=trust"
+      - "POSTGRES_OST_AUTH_METHOD=trust"
 
