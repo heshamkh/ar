@@ -1,5 +1,5 @@
 # Pull base image
-FROM python:3.8
+FROM python:3.7
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -17,5 +17,5 @@ RUN pip install -r /tmp/requirements.txt
 
 
 # Copy project
-#COPY . /code/
-CMD ["python", "base.py"]
+COPY . /code/
+#CMD ["python", "base.py"]

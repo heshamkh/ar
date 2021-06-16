@@ -35,10 +35,10 @@ DEBUG = int(os.environ.get('DEBUG', default=0))
 
 ALLOWED_HOSTS = ['https://arlocations.herokuapp.com/']
 
-SECRET_KEY = env("DJANGO_SECRET_KEY")
+# SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 # DEBUG = True
-DEBUG = env.bool("DJANGO_DEBUG")
+# DEBUG = env.bool("DJANGO_DEBUG")
 # SECURITY WARNING: don't run with debug turned on in production!
 
 ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
@@ -108,15 +108,33 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #         'ENGINE': 'django.db.backends.postgresql',
 #         'NAME': 'postgres',
 #         'USER': 'postgres',
-#         'PASSWORD': 'postgres',
-#         'HOST': 'db',
-#         'PORT': 5432
+#         'PASSWORD': 'heshamkh12',
+#         'HOST': 'localhost',
+#         'PORT': 5000
 #     }
 # }
 
 DATABASES = {
     "default": env.dj_db_url("DATABASE_URL", default="postgres://postgres@db/postgres")
 }
+
+# DATABASES = {
+#
+#     'default': {
+#
+#         'ENGINE': 'django.db.backends.postgresql',
+#
+#         'NAME': ‘postgres’,
+#
+#         'USER': 'postgres',
+#
+#         'PASSWORD': 'heshamkh12'
+#
+#         'HOST': 'localhost',
+#
+#         'PORT': 5050,
+#      }
+# }
 
 import dj_database_url
 db_from_env = dj_database_url.config()
