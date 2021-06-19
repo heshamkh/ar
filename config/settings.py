@@ -31,7 +31,7 @@ SECRET_KEY = '5_fzp%ibq*#l5ofy1lucm0i2d79jw=(2h1wvoaq75z(8+6jn)5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = int(os.environ.get('DEBUG', default=0))
+DEBUG = int(os.environ.get('DEBUG', default=1))
 
 # ALLOWED_HOSTS = ['https://arlocations.herokuapp.com/']
 
