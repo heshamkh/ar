@@ -41,7 +41,7 @@ DEBUG = int(os.environ.get('DEBUG', default=0))
 # DEBUG = env.bool("DJANGO_DEBUG")
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
