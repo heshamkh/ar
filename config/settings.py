@@ -35,7 +35,7 @@ DEBUG = int(os.environ.get('DEBUG', default=0))
 
 # ALLOWED_HOSTS = ['https://arlocations.herokuapp.com/']
 
- # SECRET_KEY = env("DJANGO_SECRET_KEY")
+SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 # DEBUG = True
 # DEBUG = env.bool("DJANGO_DEBUG")
