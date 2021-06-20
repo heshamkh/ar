@@ -130,8 +130,13 @@ class Event(models.Model):
         super().save(*args, **kwargs)
 
 
+class Create_event(models.Model):
+    longitude = models.DecimalField(null=True, max_digits=10, decimal_places=5)
+    latitude = models.DecimalField(null=True, max_digits=10, decimal_places=5)
+    obj = models.FileField(upload_to='covers/')
 
-
+    def __str__(self):
+        return self.Name
 
 
 
