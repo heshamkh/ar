@@ -66,8 +66,7 @@
         </div>
 
 
-     <from method="POST">
-         {% csrf_token %}
+     
         <div class="pages-content-container">
             <div class="pages-content-element">
                 <p class="lead">1. Pick the location</p>
@@ -118,12 +117,18 @@
             </div>
             <div id="content-preview" target="content-file">
             </div>
-         <button value="submit" type="submit">submit </button>
+       
         </div>
       </div>
-    </from>
+    
     <page-footer></page-footer>
     <feedback-button></feedback-button>
+<from method="POST">
+     {% csrf_token %}
+       <input name="latitude" />
+       <input name="longitude" />
+       <button value="submit" type="submit">submit </button>
+   </from>
 </body>
 
 
