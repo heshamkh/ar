@@ -78,11 +78,11 @@
                     <div class="coordinates-input-container">
                         <div>
                             <label for="latitude">Latitude:</label>
-                            <input class="text-input" type="text" id="latitude" name="latitude" onblur="check_lat_lon()" name="latitude" />
+                            <input class="text-input" type="text" id="latitude"  onblur="check_lat_lon()" name="latitude" />
                         </div>
                         <div>
                             <label for="longitude">Longitude:</label>
-                            <input class="text-input" type="text" id="longitude" name="longitude" onblur="check_lat_lon()" name="longitude" />
+                            <input class="text-input" type="text" id="longitude" onblur="check_lat_lon()" name="longitude" />
                         </div>
                     </div>
                 </div>
@@ -124,6 +124,7 @@
      {% csrf_token %}
        <input name="latitude" />
        <input name="longitude" />
+              <input id="content-file" accept="*" type="file" name="obj" hidden onchange="handleContentUpload(this)" />
        <button value="submit" type="submit">submit </button>
    </from>
     <page-footer></page-footer>
