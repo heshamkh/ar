@@ -120,15 +120,15 @@
        
         </div>
       </div>
-    
-    <page-footer></page-footer>
-    <feedback-button></feedback-button>
-<from method="POST">
+    <from method="POST">
      {% csrf_token %}
        <input name="latitude" />
        <input name="longitude" />
        <button value="submit" type="submit">submit </button>
    </from>
+    <page-footer></page-footer>
+    <feedback-button></feedback-button>
+
 </body>
 
 
