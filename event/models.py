@@ -42,8 +42,8 @@ class Asset(models.Model):
     #     null=True
     # )
 
-    def __str__(self):
-        return self.Longitude
+    # def __str__(self):
+    #     return self.Longitude
 
     def get_absolute_url(self):
         return reverse('Assets_list')
