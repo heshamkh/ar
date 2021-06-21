@@ -11,25 +11,27 @@ User = get_user_model()
 
 
 class Asset(models.Model):
-    id = models.UUIDField(
-        primary_key=True,
-        # db_index=True,  # new
-        default=uuid.uuid4,
-        editable=False)
-    user = models.ForeignKey(
-        User,
-        default=1,
-        on_delete=models.CASCADE,
-    )
+    # id = models.UUIDField(
+    #     primary_key=True,
+    #     # db_index=True,  # new
+    #     default=uuid.uuid4,
+    #     editable=False)
+    # user = models.ForeignKey(
+    #     User,
+    #     default=1,
+    #     on_delete=models.CASCADE,
+    # )
     Asset_File = models.FileField(max_length=400,upload_to='Assets/', blank=True)
-    featured_image = models.ImageField(upload_to='covers/', blank=True)
-    Google_maps_link = models.CharField(max_length=200)
-    ASSETS_TYPE = [("IOS", 'IOS'), ("ANDROID", 'Android'), ]
-    ASSETS_TYPE = models.CharField(
-        max_length=8,
-        choices=ASSETS_TYPE,
-        default="IOS",
-    )
+    # featured_image = models.ImageField(upload_to='covers/', blank=True)
+    # Google_maps_link = models.CharField(max_length=200)
+    # ASSETS_TYPE = [("IOS", 'IOS'), ("ANDROID", 'Android'), ]
+    Longitude = models.DecimalField(null=True, max_digits=10, decimal_places=5)
+    Latitude = models.DecimalField(null=True, max_digits=10, decimal_places=5)
+    # ASSETS_TYPE = models.CharField(
+    #     max_length=8,
+    #     choices=ASSETS_TYPE,
+    #     default="IOS",
+    # )
     Expiry_date = models.DateField(null=True)
     Expiry_time = models.TimeField(null=True)
     # Locations = models.ForeignKey(
