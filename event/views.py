@@ -20,14 +20,14 @@ class AssetListView(ListView):
     template_name = 'Assets_list.html'
 
 
-class AssetCreateView(LoginRequiredMixin, CreateView):
-    model = Asset
-    form_class = AssetCreationForm
-    template_name = 'Asset_new.html'
+# class AssetCreateView(LoginRequiredMixin, CreateView):
+#     model = Asset
+#     form_class = AssetCreationForm
+#     template_name = 'Asset_new.html'
 
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
+#     def form_valid(self, form):
+#         form.instance.user = self.request.user
+#         return super().form_valid(form)
 
 
 class EventListView(ListView):
@@ -154,8 +154,4 @@ def Create_event(request):
     if form.is_valid():
         pass
     context ={}
-<<<<<<< HEAD
     return render(request, 'Asset_new.html' , context)
-=======
-    return render(request, 'Asset_new.html' , context)
->>>>>>> 316464791e3a084f2fda5d1c227b4dd30d83ebc9
