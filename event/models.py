@@ -16,11 +16,11 @@ class Asset(models.Model):
         # db_index=True,  # new
         default=uuid.uuid4,
         editable=False)
-    # user = models.ForeignKey(
-    #     User,
-    #     default=1,
-    #     on_delete=models.CASCADE,
-    # )
+    user = models.ForeignKey(
+        User,
+        default=1,
+        on_delete=models.CASCADE,
+    )
     
     Asset_File = models.FileField(max_length=400,upload_to='Assets/', blank=True)
     # featured_image = models.ImageField(upload_to='covers/', blank=True)

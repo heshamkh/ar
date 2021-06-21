@@ -20,16 +20,33 @@ class AssetListView(ListView):
     template_name = 'Assets_list.html'
 
 
-class AssetCreateView(LoginRequiredMixin, CreateView):
-    model = Asset
-    form_class = AssetCreationForm
-    template_name = 'Asset_new.html'
+# class AssetCreateView(LoginRequiredMixin, CreateView):
+#     model = Asset
+#     form_class = AssetCreationForm
+#     template_name = 'Asset_new.html'
+#
+#     def form_valid(self, form):
+#         form.instance.user = self.request.user
+#         return super().form_valid(form)
 
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
+def AssetCreateView(request):
+    # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = AssetCreationForm(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            # Asset_instance = Asset.objects.create(Longitude='Longitude', )
+            print(request.POST)
 
+            return HttpResponseRedirect('/asset_list.html')
 
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = AssetCreationForm()
+
+    # return render(request, 'asset_list.html', {'form': form})
+    return
 
 
 class EventListView(ListView):
