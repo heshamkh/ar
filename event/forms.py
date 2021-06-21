@@ -106,4 +106,8 @@ class Create_event(forms.ModelForm):
         model = Create_event
         fields = ['longitude' , 'latitude' , 'obj']
     
+<<<<<<< HEAD
         
+=======
+        
+>>>>>>> 316464791e3a084f2fda5d1c227b4dd30d83ebc9

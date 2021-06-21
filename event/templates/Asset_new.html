@@ -66,8 +66,12 @@
         </div>
 
 
+<<<<<<< HEAD
      <from method="POST">
          {% csrf_token %}
+=======
+     
+>>>>>>> 316464791e3a084f2fda5d1c227b4dd30d83ebc9
         <div class="pages-content-container">
             <div class="pages-content-element">
                 <p class="lead">1. Pick the location</p>
@@ -79,11 +83,19 @@
                     <div class="coordinates-input-container">
                         <div>
                             <label for="latitude">Latitude:</label>
+<<<<<<< HEAD
                             <input class="text-input" type="text" id="latitude" name="latitude" onblur="check_lat_lon()" name="latitude" />
                         </div>
                         <div>
                             <label for="longitude">Longitude:</label>
                             <input class="text-input" type="text" id="longitude" name="longitude" onblur="check_lat_lon()" name="longitude" />
+=======
+                            <input class="text-input" type="text" id="latitude"  onblur="check_lat_lon()" name="latitude" />
+                        </div>
+                        <div>
+                            <label for="longitude">Longitude:</label>
+                            <input class="text-input" type="text" id="longitude" onblur="check_lat_lon()" name="longitude" />
+>>>>>>> 316464791e3a084f2fda5d1c227b4dd30d83ebc9
                         </div>
                     </div>
                 </div>
@@ -118,11 +130,23 @@
             </div>
             <div id="content-preview" target="content-file">
             </div>
+       
         </div>
       </div>
+<<<<<<< HEAD
     </from>
+=======
+    <from method="POST">
+     {% csrf_token %}
+       <input name="latitude" />
+       <input name="longitude" />
+              <input id="content-file" accept="*" type="file" name="obj" hidden onchange="handleContentUpload(this)" />
+       <button value="submit" type="submit">submit </button>
+   </from>
+>>>>>>> 316464791e3a084f2fda5d1c227b4dd30d83ebc9
     <page-footer></page-footer>
     <feedback-button></feedback-button>
+
 </body>
 
 

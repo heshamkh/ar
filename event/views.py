@@ -154,4 +154,8 @@ def Create_event(request):
     if form.is_valid():
         pass
     context ={}
+<<<<<<< HEAD
     return render(request, 'Asset_new.html' , context)
+=======
+    return render(request, 'Asset_new.html' , context)
+>>>>>>> 316464791e3a084f2fda5d1c227b4dd30d83ebc9
