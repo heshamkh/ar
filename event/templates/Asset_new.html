@@ -80,11 +80,11 @@
                     <div class="coordinates-input-container">
                         <div>
                             <label for="latitude">Latitude:</label>
-                            <input class="text-input" type="text" id="latitude" name="Latitude" onblur="check_lat_lon()"  />
+                            <input  name="Latitude"   />
                         </div>
                         <div>
                             <label for="longitude">Longitude:</label>
-                            <input class="text-input" type="text" id="longitude" name="Longitude" onblur="check_lat_lon()"  />
+                            <input  name="Longitude" />
                         </div>
                     </div>
                 </div>
@@ -123,9 +123,9 @@
         </div>
       </div>
     <div class=" grid grid-cols-2 gap-4">
-        <input name="Longitude" type="text">
+        <!-- <input name="Longitude" type="text">
         <input name="Latitude" type="text"> -->
-      <input id="content-file" accept="*" type="file" name="Asset_File"  onchange="handleContentUpload(this)" /> 
+      <!-- <input id="content-file" accept="*" type="file" name="Asset_File"  onchange="handleContentUpload(this)" />  --> 
 
         <!-- {{ form|crispy }} -->
     </div>
