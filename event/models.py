@@ -42,7 +42,7 @@ class Asset(models.Model):
     # )
 
     def __str__(self):
-        return self.Google_maps_link
+        return self.Name
 
     def get_absolute_url(self):
         return reverse('Assets_list')
