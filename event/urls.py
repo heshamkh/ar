@@ -15,7 +15,8 @@ from .views import ( HomePageView,
                      LocationCreateView,
                      LocationUpdateView,
                      LocationDetailView,
-                     LocationDeleteView,)
+                     LocationDeleteView,
+                     asset_create)
 urlpatterns = [
     path('', HomePageView.as_view(), name='home'), # new
     path('', asset_create),  # new
