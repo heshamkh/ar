@@ -122,16 +122,48 @@
        
         </div>
       </div>
-    <div class="creationForm grid grid-cols-2 gap-4">
+  <div class="creationForm grid grid-cols-2 gap-4">
         <input name="Longitude" type="text">
         <input name="Latitude" type="text">
-       <input id="content-file" accept="*" type="file" name="Asset_File"  onchange="handleContentUpload(this)" /> 
+       <input id="content-file" accept="*" type="file" name="Asset_File" onchange="handleContentUpload(this)">  
 
-        {{ form|crispy }}
+        
+
+<div id="div_id_Asset_File" class="mb-3"> 
+    <label for="id_Asset_File" class="block text-gray-700 text-sm font-bold mb-2">
+            Asset file<span class="asteriskField">*</span>
+         </label>
+          <input type="file" name="Asset_File" class="clearablefileinput " required="" id="id_Asset_File"> 
+          <p id="error_1_id_Asset_File" class="text-red-500 text-xs italic">
+              <strong>This field is required.</strong></p> </div> <div id="div_id_Longitude" class="mb-3">
+                   <label for="id_Longitude" class="block text-gray-700 text-sm font-bold mb-2">
+            Longitude<span class="asteriskField">*</span>
+         </label>
+          <input type="number" name="Longitude" value="12" step="0.00001" class="numberinput focus:outline-none leading-normal px-4 rounded-lg border-gray-300 appearance-none text-gray-700 w-full border block py-2 bg-white" required="" id="id_Longitude"> 
+        </div> 
+             <div id="div_id_Latitude" class="mb-3">
+               <label for="id_Latitude" class="block text-gray-700 text-sm font-bold mb-2">
+            Latitude<span class="asteriskField">*</span> 
+        </label>
+         <input type="number" name="Latitude" value="222" step="0.00001" class="numberinput focus:outline-none leading-normal px-4 rounded-lg border-gray-300 appearance-none text-gray-700 w-full border block py-2 bg-white" required="" id="id_Latitude"> </div> 
+         <div id="div_id_Expiry_date" class="mb-3">
+              <label for="id_Expiry_date" class="block text-gray-700 text-sm font-bold mb-2">
+            Expiry date<span class="asteriskField">*</span> 
+        </label> 
+        <input type="date" name="Expiry_date" class="datepicker1 dateinput focus:outline-none leading-normal px-4 rounded-lg border-red-500 appearance-none text-gray-700 w-full border block py-2 bg-white" placeholder="Select Date" required="" id="id_Expiry_date"> 
+        <p id="error_1_id_Expiry_date" class="text-red-500 text-xs italic">
+            <strong>This field is required.</strong
+                ></p>
+             </div>
+              <div id="div_id_Expiry_time" class="mb-3">
+                   <label for="id_Expiry_time" class="block text-gray-700 text-sm font-bold mb-2">
+            Expiry time<span class="asteriskField">*</span>
+         </label>
+          <input type="time" name="Expiry_time" class="timeinput focus:outline-none leading-normal px-4 rounded-lg border-red-500 appearance-none text-gray-700 w-full border block py-2 bg-white" required="" id="id_Expiry_time"> <p id="error_1_id_Expiry_time" class="text-red-500 text-xs italic">
+              <strong>This field is required.</strong></p> 
+            </div>
+
     </div>
-<div class="p-4 flex justify-end">
-        <button class="bg-purple-800 text-white px-16 py-3 rounded outline-none block" type="submit">Save</button>
-</div>
   </form>
     <page-footer></page-footer>
     <feedback-button></feedback-button>
