@@ -121,8 +121,14 @@
        
         </div>
       </div>
-     {{ form|crispy }}
-     <button class="bg-purple-800 text-white px-16 py-3 rounded outline-none block" type="submit">Save</button>
+     <form class="creationForm my-6 w-2/3" method="POST"  enctype="multipart/form-data">{% csrf_token %}
+    <div class="creationForm grid grid-cols-2 gap-4">
+        {{ form|crispy }}
+    </div>
+<div class="p-4 flex justify-end">
+        <button class="bg-purple-800 text-white px-16 py-3 rounded outline-none block" type="submit">Save</button>
+</div>
+  </form>
     <page-footer></page-footer>
     <feedback-button></feedback-button>
 
