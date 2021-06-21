@@ -20,14 +20,20 @@ class AssetListView(ListView):
     template_name = 'Assets_list.html'
 
 
-# class AssetCreateView(LoginRequiredMixin, CreateView):
-#     model = Asset
-#     form_class = AssetCreationForm
-#     template_name = 'Asset_new.html'
+class AssetCreateView(LoginRequiredMixin, CreateView):
+    model = Asset
+    form_class = AssetCreationForm
+    template_name = 'Asset_new.html'
 
-#     def form_valid(self, form):
-#         form.instance.user = self.request.user
-#         return super().form_valid(form)
+    # def form_valid(self, form):
+    #     form.instance.user = self.request.user
+    #     return super().form_valid(form)
+    def Create_event(request):
+        form = Create_event(request.POST or None)
+        if form.is_valid():
+            pass
+ 
+
 
 
 class EventListView(ListView):
@@ -149,9 +155,9 @@ class LocationDeleteView(DeleteView):
     success_url = reverse_lazy('location_list')
 
 
-def AssetCreateView(request):
-    form = Create_event(request.POST or None)
-    if form.is_valid():
-        pass
-    context ={}
-    return render(request, 'Asset_new.html' , context)
+# def Create_event(request):
+#     form = Create_event(request.POST or None)
+#     if form.is_valid():
+#         pass
+#     context ={}
+#     return render(request, 'Asset_new.html' , context)
