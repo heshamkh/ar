@@ -1,7 +1,7 @@
 from django.http import HttpResponse, HttpResponseForbidden
 from django.views.generic import TemplateView, ListView
 from .models import Event, Asset, Location
-from .forms import EventCreationForm, AssetCreationForm, LocationCreationForm
+from .forms import EventCreationForm, AssetCreationForm, LocationCreationForm ,Create_event
 from django.views.generic import ListView, DetailView # new
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -149,3 +149,9 @@ class LocationDeleteView(DeleteView):
     success_url = reverse_lazy('location_list')
 
 
+def Create_event(request):
+    form = Create_event(request.POST or None)
+    if form.is_valid():
+        pass
+    context ={}
+    return render(request, 'Asset_new.html' , context)

@@ -6,7 +6,7 @@ from django.contrib.auth.mixins import (
     LoginRequiredMixin,
 )
 
-#this a comment from vs code
+
 class SignupPageView(generic.CreateView):
     form_class = CustomUserCreationForm
     success_url = reverse_lazy('login')

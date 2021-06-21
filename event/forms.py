@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from crispy_forms.helper import FormHelper
-from .models import Event, Location, Asset
+from .models import Event, Location, Asset , Create_event
 
 
 class EventCreationForm(forms.ModelForm):
@@ -99,3 +99,11 @@ class LocationCreationForm(forms.ModelForm):
         queryset=Asset.objects.all(),
         widget=forms.CheckboxSelectMultiple
     )
+
+
+class Create_event(forms.ModelForm):
+    class Mete:
+        model = Create_event
+        fields = ['longitude' , 'latitude' , 'obj']
+    
+        

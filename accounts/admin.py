@@ -16,6 +16,6 @@ class CustomUserAdmin(UserAdmin):
         (None, {'fields': ('profilePic', 'phone', )}),
     )
 
-
+#this just  test
 admin.site.register(CustomUser, CustomUserAdmin)
 

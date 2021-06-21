@@ -65,6 +65,9 @@
             </div>
         </div>
 
+
+     <from method="POST">
+         {% csrf_token %}
         <div class="pages-content-container">
             <div class="pages-content-element">
                 <p class="lead">1. Pick the location</p>
@@ -74,14 +77,14 @@
                 </p>
                 <div class="coordinates-input-wrapper">
                     <div class="coordinates-input-container">
-                        <!-- <div>
+                        <div>
                             <label for="latitude">Latitude:</label>
-                            <input class="text-input" type="text" id="latitude" onblur="check_lat_lon()" name="latitude" />
+                            <input class="text-input" type="text" id="latitude" name="latitude" onblur="check_lat_lon()" name="latitude" />
                         </div>
                         <div>
                             <label for="longitude">Longitude:</label>
-                            <input class="text-input" type="text" id="longitude" onblur="check_lat_lon()" name="longitude" />
-                        </div> -->
+                            <input class="text-input" type="text" id="longitude" name="longitude" onblur="check_lat_lon()" name="longitude" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -116,7 +119,8 @@
             <div id="content-preview" target="content-file">
             </div>
         </div>
-    </div>
+      </div>
+    </from>
     <page-footer></page-footer>
     <feedback-button></feedback-button>
 </body>
