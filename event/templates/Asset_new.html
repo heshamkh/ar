@@ -78,14 +78,18 @@
                 </p>
                 <div class="coordinates-input-wrapper creationForm">
                     <div class="coordinates-input-container">
-                        <!-- <div>
-                            <label for="latitude">Latitude:</label>
-                            <input  name="Latitude"   />
-                        </div>
-                        <div>
-                            <label for="longitude">Longitude:</label>
-                            <input  name="Longitude" />
-                        </div> -->
+                        <div id="div_id_Longitude" class="mb-3">
+                            <label for="id_Longitude" class="block text-gray-700 text-sm font-bold mb-2">
+                            Longitude
+                        </label>
+                        <input type="number" name="Longitude" class="numberinput focus:outline-none leading-normal px-4 rounded-lg border-gray-300 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Longitude"> 
+                        </div> 
+                            <div id="div_id_Latitude" class="mb-3">
+                            <label for="id_Latitude" class="block text-gray-700 text-sm font-bold mb-2">
+                            Latitude
+                        </label>
+                        <input type="number" name="Latitude"  class="numberinput focus:outline-none leading-normal px-4 rounded-lg border-gray-300 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Latitude">
+                        </div> 
                    </div> 
                 </div>
             </div>
@@ -112,7 +116,7 @@
                 </ul>
                 </p>
                 <label class="passive-button file-input">
-                    <input id="content-file" accept="*" type="file" name="Asset_File"  onchange="handleContentUpload(this)" />
+                    <input id="content-file" accept="*" type="file" name="Asset_File" hidden onchange="handleContentUpload(this)" />
                     Upload file
                 </label>
                 <p id="content-error" class="error"></p>
@@ -123,9 +127,7 @@
         </div>
       </div>
   <div class="creationForm grid grid-cols-2 gap-4">
-        <input name="Longitude" type="text">
-        <input name="Latitude" type="text">
-       <input id="content-file" accept="*" type="file" name="Asset_File" onchange="handleContentUpload(this)">  
+    
 
         
 
@@ -135,17 +137,7 @@
          </label>
           <input type="file" name="Asset_File" class="clearablefileinput " id="id_Asset_File"> 
            </div>
-            <div id="div_id_Longitude" class="mb-3">
-                   <label for="id_Longitude" class="block text-gray-700 text-sm font-bold mb-2">
-            Longitude<span class="asteriskField"></span>
-         </label>
-          <input type="number" name="Longitude" value="12" step="0.00001" class="numberinput focus:outline-none leading-normal px-4 rounded-lg border-gray-300 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Longitude"> 
-        </div> 
-             <div id="div_id_Latitude" class="mb-3">
-               <label for="id_Latitude" class="block text-gray-700 text-sm font-bold mb-2">
-            Latitude<span class="asteriskField"></span> 
-        </label>
-         <input type="number" name="Latitude" value="222" step="0.00001" class="numberinput focus:outline-none leading-normal px-4 rounded-lg border-gray-300 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Latitude"> </div> 
+           
          <div id="div_id_Expiry_date" class="mb-3">
               <label for="id_Expiry_date" class="block text-gray-700 text-sm font-bold mb-2">
             Expiry date<span class="asteriskField"></span> 
@@ -164,8 +156,6 @@
     </div>
     <button value="submit" name="Submit">submit</button>
   </form>
-    <page-footer></page-footer>
-    <feedback-button></feedback-button>
 
 </body>
 
