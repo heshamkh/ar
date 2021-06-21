@@ -101,9 +101,4 @@ class LocationCreationForm(forms.ModelForm):
     )
 
 
-class Create_event(forms.ModelForm):
-    class Mete:
-        model = Create_event
-        fields = ['longitude' , 'latitude' , 'obj']
-    
-        
+
