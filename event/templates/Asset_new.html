@@ -49,6 +49,7 @@
 </head>
 
 <body>
+     <form class="creationForm my-6 w-2/3" method="POST"  enctype="multipart/form-data">{% csrf_token %}
 
     <div class="pages-content">
         <back-anchor assetsUrl="https://softylus.com/studio-master/assets"></back-anchor>
@@ -121,7 +122,6 @@
        
         </div>
       </div>
-     <form class="creationForm my-6 w-2/3" method="POST"  enctype="multipart/form-data">{% csrf_token %}
     <div class="creationForm grid grid-cols-2 gap-4">
         <input name="Longitude" type="text">
         <input name="Latitude" type="text">
