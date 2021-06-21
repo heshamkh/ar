@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from crispy_forms.helper import FormHelper
-from .models import Event, Location, Asset , Create_event
+from .models import Event, Location, Asset 
 
 
 class EventCreationForm(forms.ModelForm):
