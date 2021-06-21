@@ -58,9 +58,8 @@ class AssetCreationForm(forms.ModelForm):
         }
 
     Asset_File = forms.FileField()
-    Google_maps_link = forms.CharField()
-    featured_image = forms.ImageField()
-    ASSETS_TYPE = forms.Select()
+    Longitude = forms.NumberInput()
+    Latitude = forms.NumberInput()
 
 
 class LocationCreationForm(forms.ModelForm):
