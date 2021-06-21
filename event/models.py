@@ -21,6 +21,7 @@ class Asset(models.Model):
     #     default=1,
     #     on_delete=models.CASCADE,
     # )
+    
     Asset_File = models.FileField(max_length=400,upload_to='Assets/', blank=True)
     # featured_image = models.ImageField(upload_to='covers/', blank=True)
     # Google_maps_link = models.CharField(max_length=200)
@@ -41,8 +42,8 @@ class Asset(models.Model):
     #     null=True
     # )
 
-    def __str__(self):
-        return self.Longitude
+    # def __str__(self):
+    #     return self.Longitude
 
     def get_absolute_url(self):
         return reverse('Assets_list')
