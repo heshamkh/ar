@@ -151,9 +151,3 @@ class LocationDeleteView(DeleteView):
     success_url = reverse_lazy('location_list')
 
 
-# def Create_event(request):
-#     form = Create_event(request.POST or None)
-#     if form.is_valid():
-#         pass
-#     context ={}
-#     return render(request, 'Asset_new.html' , context)
