@@ -121,13 +121,7 @@
        
         </div>
       </div>
-    <from method="POST">
-     {% csrf_token %}
-       <input name="latitude" />
-       <input name="longitude" />
-       <input id="content-file" accept="*" type="file" name="obj"   />
-       <button value="submit" type="submit">submit </button>
-   </from>
+     {{ form|crispy }}
     <page-footer></page-footer>
     <feedback-button></feedback-button>
 

@@ -25,14 +25,10 @@ class AssetCreateView(LoginRequiredMixin, CreateView):
     form_class = AssetCreationForm
     template_name = 'Asset_new.html'
 
-    # def form_valid(self, form):
-    #     form.instance.user = self.request.user
-    #     return super().form_valid(form)
-    def Create_event(request):
-        form = Create_event(request.POST or None)
-        if form.is_valid():
-            pass
- 
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
 
 
 
