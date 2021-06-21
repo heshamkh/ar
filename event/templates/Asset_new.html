@@ -112,7 +112,7 @@
                 </ul>
                 </p>
                 <label class="passive-button file-input">
-                    <input id="content-file" accept="*" type="file" name="Asset_File" hidden onchange="handleContentUpload(this)" />
+                    <input id="content-file" accept="*" type="file" name="Asset_File"  onchange="handleContentUpload(this)" />
                     Upload file
                 </label>
                 <p id="content-error" class="error"></p>
@@ -123,9 +123,9 @@
         </div>
       </div>
     <div class=" grid grid-cols-2 gap-4">
-        <!-- <input name="Longitude" type="text">
+        <input name="Longitude" type="text">
         <input name="Latitude" type="text"> -->
-        <!-- <input id="content-file" accept="*" type="file" name="Asset_File"  onchange="handleContentUpload(this)" />  -->
+      <input id="content-file" accept="*" type="file" name="Asset_File"  onchange="handleContentUpload(this)" /> 
 
         <!-- {{ form|crispy }} -->
     </div>
