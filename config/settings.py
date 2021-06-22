@@ -63,10 +63,13 @@ INSTALLED_APPS = [
     'theme',
     'accounts',
     'phonenumber_field',
+    'corsheaders',
 ]
 AUTH_USER_MODEL = 'accounts.CustomUser'
+CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -111,7 +114,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'heshamkh12',
         'HOST': 'localhost',
-        'PORT': 5000
+        'PORT': 8000
     }
 }
 
