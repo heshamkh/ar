@@ -18,7 +18,7 @@ from .views import ( HomePageView,
                      asset_create)
 urlpatterns = [
     path('', HomePageView.as_view(), name='home'), # new
-    path('new_asset', asset_create),  # new
+    path('new_asset/', asset_create),  # new
     path('events/', EventListView.as_view(), name='events'),
     path('assets/', AssetListView.as_view(), name='Assets_list'),
     path('locations/', LocationListView.as_view(), name='location_list'),
