@@ -34,7 +34,7 @@ class AssetListView(ListView):
 def asset_create(request):
     form = AssetCreationForm(request.POST or None)
     if form.is_valid():
-        print(form.cleaned_data)
+        print(form.request)
         form.save()
         return redirect('/')
     context = {}
