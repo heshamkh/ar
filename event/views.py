@@ -37,6 +37,8 @@ def asset_create(request):
         print(form.request)
         form.save()
         return redirect('/')
+    else:
+        print("smth error")
     context = {}
     return render(request, "Asset_new.html", context)
 
