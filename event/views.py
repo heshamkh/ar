@@ -4,7 +4,7 @@ from .models import Event, Asset, Location
 from .forms import EventCreationForm, AssetCreationForm, LocationCreationForm 
 from django.views.generic import ListView, DetailView # new
 from django.urls import reverse_lazy
-from django.shortcuts import render
+from django.shortcuts import render ,redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import (
     LoginRequiredMixin,

@@ -67,7 +67,7 @@
         </div>
 
 
-     <from method="POST" action="">
+     <form method="POST" action="">
          {% csrf_token %}
         <div class="pages-content-container">
             <div class="pages-content-element">
@@ -114,7 +114,7 @@
                     <li>Image (.jpg, .png, .gif; max size 15MB)</li>
                     <li>Video (.mp4; max size 25MB)</li>
                 </ul>
-                </p>
+
                 <label class="passive-button file-input">
                     <input id="content-file"   class="clearablefileinput " accept="*" type="file" name="Asset_File" hidden onchange="handleContentUpload(this)" />
                     Upload file
@@ -155,8 +155,10 @@
 
     </div>
     <button value="submit" name="Submit">submit</button>
-  </form>
 
+     </form>
+    </div>
+     </form>
 </body>
 
 
