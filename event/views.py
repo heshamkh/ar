@@ -37,7 +37,7 @@ def asset_create(request):
         print(form.cleaned_data)
         form.save()
         return redirect('/')
-    context = {"form": form}
+    context = {}
     return render(request, "Asset_new.html", context)
 
 # def asset_create(request):
