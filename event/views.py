@@ -37,7 +37,7 @@ def asset_create(request):
         form.save()
         return redirect('/')
     context = {"form": form}
-    return render(request, "/Asset_new.html", context)
+    return render(request, "Asset_new.html", context)
 
 # def asset_create(request):
 #     # if this is a POST request we need to process the form data
