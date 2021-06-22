@@ -29,8 +29,10 @@ class AssetCreateView(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         return super().form_valid(form)
 
+
 def asset_create(request):
     # if this is a POST request we need to process the form data
+    print("hello")
     if request.method == 'POST':
         print("hellos")
         form = AssetCreationForm(request.POST)
