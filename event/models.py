@@ -10,17 +10,18 @@ from PIL import Image, ImageDraw
 User = get_user_model()
 
 
+
 class Asset(models.Model):
     id = models.UUIDField(
         primary_key=True,
         # db_index=True,  # new
         default=uuid.uuid4,
         editable=False)
-    user = models.ForeignKey(
-        User,
-        default=1,
-        on_delete=models.CASCADE,
-    )
+    # user = models.ForeignKey(
+    #     User,
+    #     default=1,
+    #     on_delete=models.CASCADE,
+    # )
     
     Asset_File = models.FileField(upload_to='Assets/', blank=True)
     # featured_image = models.ImageField(upload_to='covers/', blank=True)
