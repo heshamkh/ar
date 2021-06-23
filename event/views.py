@@ -36,7 +36,7 @@ def asset_create(request):
     if request.method == 'POST':
         if form.is_valid():
             # instance = AssetCreationForm(file_field=request.FILES['Asset_File'])
-            print(instance)
+            # print(instance)
             form.save()
             return redirect('/thanks')
     else:
