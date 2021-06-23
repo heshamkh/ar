@@ -38,7 +38,7 @@ def asset_create(request):
             # instance = AssetCreationForm(file_field=request.FILES['Asset_File'])
             # print(instance)
             form.save()
-            return redirect('/thanks')
+            return redirect('/')
     else:
         context = {"form": form}
     return render(request, "Asset_new.html", context)
