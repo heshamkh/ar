@@ -57,7 +57,7 @@ class AssetCreationForm(forms.ModelForm):
             'Expiry_time': forms.TimeInput(format='%H:%M',attrs={'type': 'time'}),
         }
 
-    Asset_File = forms.FileField(max_length="100")
+    Asset_File = forms.FileField()
     Longitude = forms.NumberInput()
     Latitude = forms.NumberInput()
 
