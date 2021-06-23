@@ -40,8 +40,6 @@ def asset_create(request):
             form.save()
             return redirect('/thanks')
 
-    else:
-        form = AssetCreationForm()
     context = {"form": form}
     return render(request, "Asset_new.html", context)
 
