@@ -2,43 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c33984d5-294c-420a-adba-59bd5720574d" name="Default Changelist" comment="profile pic">
-      <change afterPath="$PROJECT_DIR$/event/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0002_auto_20210602_1353.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0003_events.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0004_rename_events_event.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0005_auto_20210602_1406.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0006_auto_20210602_1419.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0007_auto_20210605_1008.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0008_auto_20210605_1014.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0009_auto_20210605_1030.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0010_auto_20210605_1034.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0011_alter_event_locations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0012_remove_event_locations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0013_event_locations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0014_event_asset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0015_alter_event_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0016_auto_20210606_0701.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0017_auto_20210606_0817.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0018_remove_asset_events.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0019_auto_20210606_0850.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0020_auto_20210606_0858.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0021_auto_20210606_0928.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0022_auto_20210606_0932.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0023_auto_20210606_1118.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0024_event_assets.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0025_alter_event_photo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0026_alter_event_photo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0027_auto_20210609_0753.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0028_auto_20210609_0755.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0029_location_assets.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0030_alter_event_photo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0031_auto_20210613_1044.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0031_event_qr_code.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0032_merge_0031_auto_20210613_1044_0031_event_qr_code.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0033_auto_20210615_0757.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0034_auto_20210621_1247.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/0035_auto_20210622_0819.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Asset_new.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Asset_new.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624453860510</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="profile pic">
+      <created>1624454318243</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1624454318243</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
