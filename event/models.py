@@ -22,7 +22,7 @@ class Asset(models.Model):
 #         on_delete=models.CASCADE,
 #     )
     
-    Asset_File = models.FileField(max_length=400,upload_to='Assets/', blank=True)
+    Asset_File = models.FileField(max_length=400, upload_to='Assets/', blank=True)
     # featured_image = models.ImageField(upload_to='covers/', blank=True)
     # Google_maps_link = models.CharField(max_length=200)
     # ASSETS_TYPE = [("IOS", 'IOS'), ("ANDROID", 'Android'), ]
