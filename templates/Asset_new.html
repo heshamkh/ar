@@ -118,8 +118,8 @@
 
 
                 <label class="passive-button file-input">
-                    <input id="content-file" accept="*" type="file" hidden name="Asset_File"  onchange="handleContentUpload(this)" />
-                    Upload file
+<!--                    <input id="id_Asset_File" accept="*" type="file" hidden name="Asset_File"  onchange="handleContentUpload(this)" />-->
+<!--                    Upload file-->
                 </label>
                     <p id="content-error" class="error"></p>
             </div>
@@ -133,12 +133,12 @@
 
 
 
-<!-- <div id="div_id_Asset_File" class="mb-3">
-    <label for="id_Asset_File" class="block text-gray-700 text-sm font-bold mb-2">
+ <div id="div_id_Asset_File" class="mb-3">
+    <label for="content-file" class="block text-gray-700 text-sm font-bold mb-2">
             Asset file
          </label>
-          <input type="file" name="Asset_File" class="clearablefileinput " id="id_Asset_File">
-           </div> -->
+          <input type="file" id="content-file" accept="*"  name="Asset_File" class="clearablefileinput " >
+           </div>
 
          <div id="div_id_Expiry_date" class="mb-3">
               <label for="id_Expiry_date" class="block text-gray-700 text-sm font-bold mb-2">
