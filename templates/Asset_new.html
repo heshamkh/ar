@@ -116,10 +116,14 @@
                 </ul>
 
                 <label class="passive-button file-input">
-                    <input id="content-file"   class="clearablefileinput " accept="*" type="file" name="Asset_File"  onchange="handleContentUpload(this)" />
+                    <input    class="clearablefileinput " accept="*" type="file" name="Asset_File"  onchange="handleContentUpload(this)" />
                     Upload file
                 </label>
                 <p id="content-error" class="error"></p>
+                <label class="passive-button file-input">
+                    <input id="content-file" accept="*" type="file" hidden onchange="handleContentUpload(this)" />
+                    Upload file
+                </label>
             </div>
 
 
