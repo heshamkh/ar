@@ -1,10 +1,10 @@
 from django.http import HttpResponse, HttpResponseForbidden
 from django.views.generic import TemplateView, ListView
 from .models import Event, Asset, Location
-from .forms import EventCreationForm, AssetCreationForm, LocationCreationForm 
-from django.views.generic import ListView, DetailView # new
+from .forms import EventCreationForm, AssetCreationForm, LocationCreationForm
+from django.views.generic import ListView, DetailView  # new
 from django.urls import reverse_lazy
-from django.shortcuts import render ,redirect
+from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import (
     LoginRequiredMixin,
@@ -34,14 +34,17 @@ class AssetListView(ListView):
 def asset_create(request):
     if request.method == 'POST':
         form = AssetCreationForm(request.POST, request.FILES)
+
         if form.is_valid():
-         print(form.request)
-         form.save()
-         return redirect('/thanks')
+            print(form.request)
+            form.save()
+            return redirect('/thanks')
+
     else:
         form = AssetCreationForm()
     context = {"form": form}
     return render(request, "Asset_new.html", context)
+
 
 # def asset_create(request):
 #     # if this is a POST request we need to process the form data
@@ -134,10 +137,11 @@ class LocationListView(ListView):
     template_name = 'location_list.html'
 
 
-class LocationCreateView( CreateView):
+class LocationCreateView(CreateView):
     model = Location
     form_class = LocationCreationForm
     template_name = 'location_new.html'
+
     # fields = ('Name', 'Photo', 'starting_date', 'ending_date')
 
     def get_form_kwargs(self):
@@ -151,7 +155,6 @@ class LocationCreateView( CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
-
 
 
 class LocationDetailView(DetailView):
@@ -181,5 +184,3 @@ class LocationDeleteView(DeleteView):
     model = Location
     template_name = 'location_delete.html'
     success_url = reverse_lazy('location_list')
-
-
