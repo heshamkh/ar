@@ -22,6 +22,7 @@ dj-database-url = "*"
 environs = {version = "==8.0.0", extras = ["django"]}
 whitenoise = "==5.1.0"
 gunicorn = "==20.0.4"
+babel = "*"
 
 [dev-packages]
 
