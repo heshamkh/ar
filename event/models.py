@@ -10,7 +10,6 @@ from PIL import Image, ImageDraw
 User = get_user_model()
 
 
-
 class Asset(models.Model):
     id = models.UUIDField(
         primary_key=True,
