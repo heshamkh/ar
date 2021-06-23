@@ -37,8 +37,9 @@ def asset_create(request):
         if form.is_valid():
             form.save()
             return redirect('/')
-    else:
-        context = {"form": form}
+        else:
+            print(form.errors)
+    context = {}
     return render(request, "Asset_new.html", context)
 
 

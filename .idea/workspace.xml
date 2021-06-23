@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c33984d5-294c-420a-adba-59bd5720574d" name="Default Changelist" comment=" load static">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event/templates/Asset_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/templates/Asset_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event/templates/Assets_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/templates/Assets_list.html" afterDir="false" />
+    <list default="true" id="c33984d5-294c-420a-adba-59bd5720574d" name="Default Changelist" comment="profile pic">
+      <change beforePath="$PROJECT_DIR$/templates/Asset_new.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Asset_new.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +12,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="development" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,56 +49,161 @@
       <option name="project" value="LOCAL" />
       <updated>1624445820460</updated>
     </task>
-    <task id="LOCAL-00002" summary="22">
-      <created>1624446770480</created>
+    <task id="LOCAL-00002" summary="profile pic">
+      <created>1624448583162</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1624446770480</updated>
+      <updated>1624448583162</updated>
     </task>
-    <task id="LOCAL-00003" summary="phone number">
-      <created>1624449278574</created>
+    <task id="LOCAL-00003" summary="profile pic">
+      <created>1624448990739</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1624449278574</updated>
+      <updated>1624448990739</updated>
     </task>
-    <task id="LOCAL-00004" summary="home">
-      <created>1624449770255</created>
+    <task id="LOCAL-00004" summary="profile pic">
+      <created>1624449163100</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1624449770255</updated>
+      <updated>1624449163100</updated>
     </task>
-    <task id="LOCAL-00005" summary="phone number">
-      <created>1624450441638</created>
+    <task id="LOCAL-00005" summary="profile pic">
+      <created>1624449562898</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1624450441638</updated>
+      <updated>1624449562898</updated>
     </task>
-    <task id="LOCAL-00006" summary="install bable">
-      <created>1624452171409</created>
+    <task id="LOCAL-00006" summary="profile pic">
+      <created>1624450028803</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1624452171409</updated>
+      <updated>1624450028803</updated>
     </task>
-    <task id="LOCAL-00007" summary="install bable">
-      <created>1624452483467</created>
+    <task id="LOCAL-00007" summary="profile pic">
+      <created>1624450260899</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1624452483467</updated>
+      <updated>1624450260899</updated>
     </task>
-    <task id="LOCAL-00008" summary=" load static">
-      <created>1624452846412</created>
+    <task id="LOCAL-00008" summary="profile pic">
+      <created>1624450355264</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1624452846412</updated>
+      <updated>1624450355264</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="profile pic">
+      <created>1624450917922</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1624450917922</updated>
+    </task>
+    <task id="LOCAL-00010" summary="profile pic">
+      <created>1624450925985</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1624450925985</updated>
+    </task>
+    <task id="LOCAL-00011" summary="profile pic">
+      <created>1624451450080</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1624451450080</updated>
+    </task>
+    <task id="LOCAL-00012" summary="profile pic">
+      <created>1624452216670</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1624452216670</updated>
+    </task>
+    <task id="LOCAL-00013" summary="profile pic">
+      <created>1624452240785</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1624452240785</updated>
+    </task>
+    <task id="LOCAL-00014" summary="profile pic">
+      <created>1624452539609</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1624452539609</updated>
+    </task>
+    <task id="LOCAL-00015" summary="profile pic">
+      <created>1624452670154</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1624452670154</updated>
+    </task>
+    <task id="LOCAL-00016" summary="profile pic">
+      <created>1624452766950</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1624452766950</updated>
+    </task>
+    <task id="LOCAL-00017" summary="profile pic">
+      <created>1624453166963</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1624453166963</updated>
+    </task>
+    <task id="LOCAL-00018" summary="profile pic">
+      <created>1624453514752</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1624453514752</updated>
+    </task>
+    <task id="LOCAL-00019" summary="profile pic">
+      <created>1624453860510</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1624453860510</updated>
+    </task>
+    <task id="LOCAL-00020" summary="profile pic">
+      <created>1624454318243</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1624454318243</updated>
+    </task>
+    <task id="LOCAL-00021" summary="profile pic">
+      <created>1624454825995</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1624454825995</updated>
+    </task>
+    <task id="LOCAL-00022" summary="profile pic">
+      <created>1624455152409</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1624455152409</updated>
+    </task>
+    <task id="LOCAL-00023" summary="profile pic">
+      <created>1624455505474</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1624455505474</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,14 +216,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="profile pic" />
-    <MESSAGE value="22" />
-    <MESSAGE value="home" />
-    <MESSAGE value="phone number" />
-    <MESSAGE value="install bable" />
-    <MESSAGE value=" load static" />
-    <option name="LAST_COMMIT_MESSAGE" value=" load static" />
+    <option name="LAST_COMMIT_MESSAGE" value="profile pic" />
   </component>
 </project>

@@ -54,7 +54,7 @@ class AssetCreationForm(forms.ModelForm):
         widgets = {
             'Expiry_date': forms.DateInput(format=('%Y-%m-%d'),
                                              attrs={'class': 'datepicker1', 'placeholder': 'Select Date', 'type': 'date'}),
-            'Expiry_time': forms.TimeInput(format='%H:%M',attrs={'type': 'time'}),
+            'Expiry_time': forms.TimeInput(format='%H:%M', attrs={'type': 'time'}),
         }
 
     Asset_File = forms.FileField()

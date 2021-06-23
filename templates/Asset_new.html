@@ -82,13 +82,13 @@
                             <label for="id_Longitude" class="block text-gray-700 text-sm font-bold mb-2">
                             Longitude
                         </label>
-                        <input type="number" name="Longitude" class="numberinput focus:outline-none leading-normal px-4 rounded-lg border-gray-300 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Longitude">
+                        <input  name="Longitude" class="numberinput focus:outline-none leading-normal px-4 rounded-lg border-gray-300 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Longitude">
                         </div>
                             <div id="div_id_Latitude" class="mb-3">
                             <label for="id_Latitude" class="block text-gray-700 text-sm font-bold mb-2">
                             Latitude
                         </label>
-                        <input type="number" name="Latitude"  class="numberinput focus:outline-none leading-normal px-4 rounded-lg border-gray-300 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Latitude">
+                        <input  name="Latitude"  class="numberinput focus:outline-none leading-normal px-4 rounded-lg border-gray-300 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Latitude">
                         </div>
                    </div>
                 </div>
@@ -118,12 +118,13 @@
 
 
                 <label class="passive-button file-input">
-                    <input id="content-file" accept="*" type="file" hidden name="Asset_File"  onchange="handleContentUpload(this)" />
+<!--                    <input  id="content-file" accept="*" type="file" hidden name="Asset_File"  class="clearablefileinput "  onchange="handleContentUpload(this)" />-->
                     Upload file
                 </label>
                     <p id="content-error" class="error"></p>
             </div>
-
+            <div id="content-preview" target="content-file">
+            </div>
 
         </div>
 
@@ -132,12 +133,15 @@
 
 
 
-<!-- <div id="div_id_Asset_File" class="mb-3">
-    <label for="id_Asset_File" class="block text-gray-700 text-sm font-bold mb-2">
+ <div id="div_id_Asset_File" class="mb-3">
+    <label for="content-file" class="block text-gray-700 text-sm font-bold mb-2">
             Asset file
          </label>
-          <input type="file" name="Asset_File" class="clearablefileinput " id="id_Asset_File">
-           </div> -->
+          <input type="file"  id="content-file" accept="*"  name="Asset_File" class="clearablefileinput "  >
+           </div>
+
+
+           </div>
 
          <div id="div_id_Expiry_date" class="mb-3">
               <label for="id_Expiry_date" class="block text-gray-700 text-sm font-bold mb-2">
@@ -151,7 +155,7 @@
             Expiry time
          </label>
           <input type="time" name="Expiry_time" class="timeinput focus:outline-none leading-normal px-4 rounded-lg border-red-500 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Expiry_time"> <p id="error_1_id_Expiry_time" class="text-red-500 text-xs italic">
-              <strong>This field is required.</strong></p>
+
             </div>
 
     </div>
@@ -164,7 +168,7 @@
 <!--            <button class="btn btn-primary" type='submit'>Submit</button>-->
 <!--        </form>-->
     </div>
- <page-footer></page-footer>
+<page-footer style="display:none;"></page-footer>
     <feedback-button></feedback-button>
 </body>
 
