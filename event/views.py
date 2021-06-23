@@ -32,6 +32,7 @@ class AssetListView(ListView):
 
 
 def asset_create(request):
+    form = AssetCreationForm()
     if request.method == 'POST':
         form = AssetCreationForm(request.POST, request.FILES)
 
