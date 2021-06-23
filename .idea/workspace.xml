@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c33984d5-294c-420a-adba-59bd5720574d" name="Default Changelist" comment="profile pic">
-      <change beforePath="$PROJECT_DIR$/templates/Asset_new.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Asset_new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/templates/Assets_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/templates/Assets_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
