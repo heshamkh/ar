@@ -22,12 +22,12 @@ class Asset(models.Model):
 #         on_delete=models.CASCADE,
 #     )
     
-    Asset_File = models.FileField(upload_to='Assets/', blank=True, max_length=500)
+    Asset_File = models.FileField(upload_to='Assets/', blank=True)
     # featured_image = models.ImageField(upload_to='covers/', blank=True)
     # Google_maps_link = models.CharField(max_length=200)
     # ASSETS_TYPE = [("IOS", 'IOS'), ("ANDROID", 'Android'), ]
-    Longitude = models.CharField(null=True, max_length=255)
-    Latitude = models.CharField(null=True, max_length=255)
+    Longitude = models.DecimalField(null=True, max_digits=20, decimal_places=4)
+    Latitude = models.DecimalField(null=True, max_digits=20, decimal_places=4)
     # ASSETS_TYPE = models.CharField(
     #     max_length=8,
     #     choices=ASSETS_TYPE,

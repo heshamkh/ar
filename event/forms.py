@@ -58,8 +58,8 @@ class AssetCreationForm(forms.ModelForm):
         }
 
     Asset_File = forms.FileField()
-    Longitude = forms.CharField()
-    Latitude = forms.CharField()
+    Longitude = forms.NumberInput()
+    Latitude = forms.NumberInput()
 
 
 class LocationCreationForm(forms.ModelForm):
