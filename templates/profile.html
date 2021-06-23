@@ -7,8 +7,9 @@
              {% if user.profilePic %}
                 <img class=" w-80 h-80 rounded-full object-cover object-center" src="{{ user.profilePic.url }}">
             {% else %}
-                <div class=" w-80 h-80 bg-gray-300 rounded-full object-cover object-center"></div>
+                <img class=" w-80 h-80 rounded-full object-cover object-center" src="{% static 'images/nopic.jpg' %}">
             {% endif %}
+
         <div class="py-4 px-6 flex flex-col justify-center">
             <h1 class="text-2xl font-semibold text-gray-800 capitalize">{{ user.username }}</h1>
 <!--            <p class="py-2 text-lg text-gray-700">Full Stack maker & UI / UX Designer , love hip hop music Author of Building UI.</p>-->
