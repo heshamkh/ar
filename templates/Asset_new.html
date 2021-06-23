@@ -67,100 +67,100 @@
         </div>
 
 
-<!--     <form action="/new_asset/" method="POST">-->
-<!--         {% csrf_token %}-->
-<!--        <div class="pages-content-container">-->
-<!--            <div class="pages-content-element">-->
-<!--                <p class="lead">1. Pick the location</p>-->
-<!--                <p class="paragraph">-->
-<!--                    Click to drop a pin on the map or enter exact GPS coordinates. You may enter up to 10 locations.-->
-<!--                    You can retrieve latitude and longitude from an address using <a target="_blannk" href="https://www.latlong.net/" class="link">this tool</a>.-->
-<!--                </p>-->
-<!--                <div class="coordinates-input-wrapper creationForm">-->
-<!--                    <div class="coordinates-input-container">-->
-<!--                        <div id="div_id_Longitude" class="mb-3">-->
-<!--                            <label for="id_Longitude" class="block text-gray-700 text-sm font-bold mb-2">-->
-<!--                            Longitude-->
-<!--                        </label>-->
-<!--                        <input type="number" name="Longitude" class="numberinput focus:outline-none leading-normal px-4 rounded-lg border-gray-300 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Longitude"> -->
-<!--                        </div> -->
-<!--                            <div id="div_id_Latitude" class="mb-3">-->
-<!--                            <label for="id_Latitude" class="block text-gray-700 text-sm font-bold mb-2">-->
-<!--                            Latitude-->
-<!--                        </label>-->
-<!--                        <input type="number" name="Latitude"  class="numberinput focus:outline-none leading-normal px-4 rounded-lg border-gray-300 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Latitude">-->
-<!--                        </div> -->
-<!--                   </div> -->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+     <form  method="POST" enctype="multipart/form-data">
+         {% csrf_token %}
+        <div class="pages-content-container">
+            <div class="pages-content-element">
+                <p class="lead">1. Pick the location</p>
+                <p class="paragraph">
+                    Click to drop a pin on the map or enter exact GPS coordinates. You may enter up to 10 locations.
+                    You can retrieve latitude and longitude from an address using <a target="_blannk" href="https://www.latlong.net/" class="link">this tool</a>.
+                </p>
+                <div class="coordinates-input-wrapper creationForm">
+                    <div class="coordinates-input-container">
+                        <div id="div_id_Longitude" class="mb-3">
+                            <label for="id_Longitude" class="block text-gray-700 text-sm font-bold mb-2">
+                            Longitude
+                        </label>
+                        <input type="number" name="Longitude" class="numberinput focus:outline-none leading-normal px-4 rounded-lg border-gray-300 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Longitude">
+                        </div>
+                            <div id="div_id_Latitude" class="mb-3">
+                            <label for="id_Latitude" class="block text-gray-700 text-sm font-bold mb-2">
+                            Latitude
+                        </label>
+                        <input type="number" name="Latitude"  class="numberinput focus:outline-none leading-normal px-4 rounded-lg border-gray-300 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Latitude">
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
 
-
-<!--&lt;!&ndash;        <div class="pages-content-container">&ndash;&gt;-->
-<!--&lt;!&ndash;            <map-pick-location></map-pick-location>&ndash;&gt;-->
-<!--&lt;!&ndash;        </div>&ndash;&gt;-->
 
 <!--        <div class="pages-content-container">-->
-<!--            <div class="pages-content-element">-->
-<!--                <p class="lead">2. Choose the content </p>-->
-<!--                <p class="paragraph">-->
-<!--                <p>Select the type of content you would like to link to your marker and then upload the file from your-->
-<!--                    computer.</p>-->
-<!--                <p class="bold">-->
-<!--                    Please check the file name and remove whitepaces.-->
-<!--                </p>-->
-<!--                <ul>-->
-<!--                    <li>3D Object (.gltf, .glb .zip; max size 50MB)</li>-->
-<!--                    <li>Image (.jpg, .png, .gif; max size 15MB)</li>-->
-<!--                    <li>Video (.mp4; max size 25MB)</li>-->
-<!--                </ul>-->
-
-<!--                <label class="passive-button file-input">-->
-<!--                    <input id="content-file"   class="clearablefileinput " accept="*" type="file" name="Asset_File"   />-->
-<!--                    Upload file-->
-<!--                </label>-->
-<!--                <p id="content-error" class="error"></p>-->
-<!--            </div>-->
-<!--          -->
-<!--       -->
+<!--            <map-pick-location></map-pick-location>-->
 <!--        </div>-->
 
-<!--  <div class="creationForm grid grid-cols-2 gap-4">-->
-<!--    -->
+        <div class="pages-content-container">
+            <div class="pages-content-element">
+                <p class="lead">2. Choose the content </p>
+                <p class="paragraph">
+                <p>Select the type of content you would like to link to your marker and then upload the file from your
+                    computer.</p>
+                <p class="bold">
+                    Please check the file name and remove whitepaces.
+                </p>
+                <ul>
+                    <li>3D Object (.gltf, .glb .zip; max size 50MB)</li>
+                    <li>Image (.jpg, .png, .gif; max size 15MB)</li>
+                    <li>Video (.mp4; max size 25MB)</li>
+                </ul>
 
-<!--        -->
+                <label class="passive-button file-input">
+                    <input id="content-file"   class="clearablefileinput " accept="*" type="file" name="Asset_File"   />
+                    Upload file
+                </label>
+                <p id="content-error" class="error"></p>
+            </div>
 
-<!--&lt;!&ndash; <div id="div_id_Asset_File" class="mb-3"> -->
-<!--    <label for="id_Asset_File" class="block text-gray-700 text-sm font-bold mb-2">-->
-<!--            Asset file-->
-<!--         </label>-->
-<!--          <input type="file" name="Asset_File" class="clearablefileinput " id="id_Asset_File"> -->
-<!--           </div> &ndash;&gt;-->
-<!--           -->
-<!--         <div id="div_id_Expiry_date" class="mb-3">-->
-<!--              <label for="id_Expiry_date" class="block text-gray-700 text-sm font-bold mb-2">-->
-<!--            Expiry date-->
-<!--        </label> -->
-<!--        <input type="date" name="Expiry_date" class="datepicker1 dateinput focus:outline-none leading-normal px-4 rounded-lg border-red-500 appearance-none text-gray-700 w-full border block py-2 bg-white" placeholder="Select Date"  id="id_Expiry_date"> -->
-<!--        -->
-<!--             </div>-->
-<!--              <div id="div_id_Expiry_time" class="mb-3">-->
-<!--                   <label for="id_Expiry_time" class="block text-gray-700 text-sm font-bold mb-2">-->
-<!--            Expiry time-->
-<!--         </label>-->
-<!--          <input type="time" name="Expiry_time" class="timeinput focus:outline-none leading-normal px-4 rounded-lg border-red-500 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Expiry_time"> <p id="error_1_id_Expiry_time" class="text-red-500 text-xs italic">-->
-<!--              <strong>This field is required.</strong></p> -->
-<!--            </div>-->
 
-<!--    </div>-->
-<!--    <button value="submit" name="Submit">submit</button>-->
+        </div>
 
-<!--     </form>-->
-        <form method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class="btn btn-primary" type='submit'>Submit</button>
-        </form>
+  <div class="creationForm grid grid-cols-2 gap-4">
+
+
+
+
+<!-- <div id="div_id_Asset_File" class="mb-3">
+    <label for="id_Asset_File" class="block text-gray-700 text-sm font-bold mb-2">
+            Asset file
+         </label>
+          <input type="file" name="Asset_File" class="clearablefileinput " id="id_Asset_File">
+           </div> -->
+
+         <div id="div_id_Expiry_date" class="mb-3">
+              <label for="id_Expiry_date" class="block text-gray-700 text-sm font-bold mb-2">
+            Expiry date
+        </label>
+        <input type="date" name="Expiry_date" class="datepicker1 dateinput focus:outline-none leading-normal px-4 rounded-lg border-red-500 appearance-none text-gray-700 w-full border block py-2 bg-white" placeholder="Select Date"  id="id_Expiry_date">
+
+             </div>
+              <div id="div_id_Expiry_time" class="mb-3">
+                   <label for="id_Expiry_time" class="block text-gray-700 text-sm font-bold mb-2">
+            Expiry time
+         </label>
+          <input type="time" name="Expiry_time" class="timeinput focus:outline-none leading-normal px-4 rounded-lg border-red-500 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Expiry_time"> <p id="error_1_id_Expiry_time" class="text-red-500 text-xs italic">
+              <strong>This field is required.</strong></p>
+            </div>
+
+    </div>
+    <button value="submit" name="Submit">submit</button>
+
+     </form>
+<!--        <form method="post" enctype="multipart/form-data">-->
+<!--            {% csrf_token %}-->
+<!--            {{ form.as_p }}-->
+<!--            <button class="btn btn-primary" type='submit'>Submit</button>-->
+<!--        </form>-->
     </div>
 
 </body>
