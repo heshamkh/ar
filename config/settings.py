@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'crispy_tailwind',
     'event',
     'tailwind',
+    'intl_tel_input',
     'theme',
     'accounts',
     'phonenumber_field',
@@ -113,7 +114,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'heshamkh12',
         'HOST': 'localhost',
-        'PORT': 5000
+        'PORT': 8000
     }
 }
 
