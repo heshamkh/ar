@@ -10,8 +10,8 @@ class CustomUserCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm):
         model = CustomUser
-        fields = UserCreationForm.Meta.fields + ('profilePic', 'phone',)
-        phone = forms.CharField(widget=IntlTelInputWidget(),
+        fields = UserCreationForm.Meta.fields + ('profilePic', 'phone_number',)
+        phone_number = forms.CharField(widget=IntlTelInputWidget(),
                                  required=False,
                                  initial='+52')
 
@@ -20,8 +20,8 @@ class CustomUserChangeForm(UserChangeForm):
     class Meta:
         model = CustomUser
         # fields = UserChangeForm.Meta.fields
-        fields = ['username', 'first_name', 'last_name', 'email', 'profilePic', 'phone']
-        phone = forms.CharField(widget=IntlTelInputWidget(),
+        fields = ['username', 'first_name', 'last_name', 'email', 'profilePic', 'phone_number']
+        phone_number = forms.CharField(widget=IntlTelInputWidget(),
                                  required=False,
                                  initial='+52')
 
