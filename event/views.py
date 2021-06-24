@@ -176,7 +176,7 @@ class LocationUpdateView(UpdateView):
         form.instance.user = self.request.user
         return super().form_valid(form)
 
-
+ 
 class LocationDeleteView(DeleteView):
     model = Location
     template_name = 'location_delete.html'
