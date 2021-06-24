@@ -55,9 +55,10 @@ class AssetCreationForm(forms.ModelForm):
             'Expiry_date': forms.DateInput(format=('%Y-%m-%d'),
                                              attrs={'class': 'datepicker1', 'placeholder': 'Select Date', 'type': 'date'}),
             'Expiry_time': forms.TimeInput(format='%H:%M', attrs={'type': 'time'}),
+            'Asset_File':forms.FileField( attrs={'onchange': 'handleContentUpload(this)', })
         }
 
-    Asset_File = forms.FileField()
+    # Asset_File = forms.FileField()
     Longitude = forms.NumberInput()
     Latitude = forms.NumberInput()
 
