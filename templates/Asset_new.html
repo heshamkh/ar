@@ -116,17 +116,23 @@
                 </ul>
 
 
-<div id="div_id_Asset_File" >
-                <label for="content-file" class="passive-button file-input">
-                    <input  id="content-file" accept="*" type="file" hidden name="Asset_File"  class="clearablefileinput "  onchange="handleContentUpload(this)" />
-                    Upload file
-                </label>
-                    <p id="content-error" class="error"></p>
-</div>
-            </div>
+<!--<div id="div_id_Asset_File" >-->
+<!--                <label for="content-file" class="passive-button file-input">-->
+<!--                    <input  id="content-file" accept="*" type="file" hidden name="Asset_File"  class="clearablefileinput "  onchange="handleContentUpload(this)" />-->
+<!--                    Upload file-->
+<!--                </label>-->
+<!--                    <p id="content-error" class="error"></p>-->
+<!--</div>-->
+
+            <div id="div_id_Asset_File" class="mb-3">
+    <label for="content-file" class="block text-gray-700 text-sm font-bold mb-2">
+            Asset file
+         </label>
+          <input type="file"  id="content-file" accept="*"  name="Asset_File" class="clearablefileinput " onchange="handleContentUpload(this)" >
+           </div>
             <div id="content-preview" target="content-file">
             </div>
-
+</div>
         </div>
 <p class="lead">2. Choose the Date </p>
   <div class="creationForm grid grid-cols-2 gap-4">
@@ -134,12 +140,7 @@
 
 
 
-<!-- <div id="div_id_Asset_File" class="mb-3">-->
-<!--    <label for="content-file" class="block text-gray-700 text-sm font-bold mb-2">-->
-<!--            Asset file-->
-<!--         </label>-->
-<!--          <input type="file"  id="content-file" accept="*"  name="Asset_File" class="clearablefileinput "  >-->
-<!--           </div>-->
+
 
 
 
