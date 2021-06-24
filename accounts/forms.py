@@ -10,7 +10,9 @@ class CustomUserCreationForm(UserCreationForm):
     class Meta(UserCreationForm):
         model = CustomUser
         fields = UserCreationForm.Meta.fields + ('profilePic', 'phone',)
-        phone = PhoneNumberField(widget=PhoneNumberPrefixWidget(attrs={'class': "form-control", }, initial='IN'))
+        phone = PhoneNumberField(widget=PhoneNumberPrefixWidget(attrs={'class': "form-control"}),
+                                 required=False,
+                                 initial='+52')
 
 
 class CustomUserChangeForm(UserChangeForm):
