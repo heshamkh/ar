@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'accounts',
     'phonenumber_field',
     'corsheaders',
+    'intl_tel_input',
 ]
 AUTH_USER_MODEL = 'accounts.CustomUser'
 CORS_ORIGIN_ALLOW_ALL = True
