@@ -18,8 +18,7 @@ class CustomUserChangeForm(UserChangeForm):
         model = CustomUser
         # fields = UserChangeForm.Meta.fields
         fields = ['username', 'first_name', 'last_name', 'email', 'profilePic', 'phone']
-        phone = PhoneNumberField(widget=PhoneNumberPrefixWidget(attrs={'placeholder': _(u'Cellphone'), 'class': "form-control"}),
-                                 label=_(u'Cellphone number'),
+        phone = PhoneNumberField(widget=PhoneNumberPrefixWidget(attrs={'class': "form-control"}),
                                  required=False,
                                  initial='+52')
 
