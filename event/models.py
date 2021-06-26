@@ -27,8 +27,8 @@ class Asset(models.Model):
     # featured_image = models.ImageField(upload_to='covers/', blank=True)
     # Google_maps_link = models.CharField(max_length=200)
     # ASSETS_TYPE = [("IOS", 'IOS'), ("ANDROID", 'Android'), ]
-    Longitude = models.FloatField(null=True)
-    Latitude = models.FloatField(null=True )
+    Longitude = models.CharField(max_length=200)
+    Latitude = models.CharField(max_length=200)
     # ASSETS_TYPE = models.CharField(
     #     max_length=8,
     #     choices=ASSETS_TYPE,
