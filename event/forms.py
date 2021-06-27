@@ -52,7 +52,7 @@ class AssetCreationForm(forms.ModelForm):
 
     class Meta:
         model = Asset
-        fields = ['Asset_File', 'Longitude', 'Latitude', 'Expiry_date', 'Expiry_time', 'Locations']
+        fields = ['Asset_File', 'Longitude', 'Latitude', 'Expiry_date', 'Expiry_time']
         widgets = {
             'Expiry_date': forms.DateInput(format=('%Y-%m-%d'),
                                              attrs={'class': 'datepicker1', 'placeholder': 'Select Date', 'type': 'date'}),
