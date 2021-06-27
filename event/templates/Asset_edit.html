@@ -65,18 +65,21 @@
                 </p>
                 <div class="coordinates-input-wrapper creationForm">
                     <div class="coordinates-input-container">
-                        <div id="div_id_Longitude" class="mb-3">
-                            <label for="id_Longitude" class="block text-gray-700 text-sm font-bold mb-2">
-                            Longitude
-                        </label>
-                        <input  name="Longitude" class="numberinput focus:outline-none leading-normal px-4 rounded-lg border-gray-300 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Longitude">
-                        </div>
-                            <div id="div_id_Latitude" class="mb-3">
-                            <label for="id_Latitude" class="block text-gray-700 text-sm font-bold mb-2">
-                            Latitude
-                        </label>
-                        <input  name="Latitude"  class="numberinput focus:outline-none leading-normal px-4 rounded-lg border-gray-300 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Latitude">
-                        </div>
+<!--                        <div id="div_id_Longitude" class="mb-3">-->
+<!--                            <label for="id_Longitude" class="block text-gray-700 text-sm font-bold mb-2">-->
+<!--                            Longitude-->
+<!--                        </label>-->
+<!--                        <input  name="Longitude" class="numberinput focus:outline-none leading-normal px-4 rounded-lg border-gray-300 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Longitude">-->
+<!--                        </div>-->
+                            {{ form.Longitude|as_crispy_field }}
+<!--                            <div id="div_id_Latitude" class="mb-3">-->
+<!--                            <label for="id_Latitude" class="block text-gray-700 text-sm font-bold mb-2">-->
+<!--                            Latitude-->
+<!--                        </label>-->
+<!--                        <input  name="Latitude"  class="numberinput focus:outline-none leading-normal px-4 rounded-lg border-gray-300 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Latitude">-->
+<!--                        </div>-->
+                            {{ form.Latitude|as_crispy_field }}
+
                    </div>
                 </div>
             </div>
@@ -115,23 +118,27 @@
 <!--          <input type="file"  id="content-file" accept="*"  name="Asset_File" class="clearablefileinput"  >-->
            </div>
            </div>
-         <div id="div_id_Expiry_date" class="mb-3">
-              <label for="id_Expiry_date" class="block text-gray-700 text-sm font-bold mb-2">
-            Expiry date
-        </label>
-        <input type="date" name="Expiry_date" class="datepicker1 dateinput focus:outline-none leading-normal px-4 rounded-lg border-red-500 appearance-none text-gray-700 w-full border block py-2 bg-white" placeholder="Select Date"  id="id_Expiry_date">
-             </div>
-              <div id="div_id_Expiry_time" class="mb-3">
-                   <label for="id_Expiry_time" class="block text-gray-700 text-sm font-bold mb-2">
-            Expiry time
-         </label>
-          <input type="time" name="Expiry_time" class="timeinput focus:outline-none leading-normal px-4 rounded-lg border-red-500 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Expiry_time"> <p id="error_1_id_Expiry_time" class="text-red-500 text-xs italic">
-            </div>
+<!--         <div id="div_id_Expiry_date" class="mb-3">-->
+<!--              <label for="id_Expiry_date" class="block text-gray-700 text-sm font-bold mb-2">-->
+<!--            Expiry date-->
+<!--        </label>-->
+<!--        <input type="date" name="Expiry_date" class="datepicker1 dateinput focus:outline-none leading-normal px-4 rounded-lg border-red-500 appearance-none text-gray-700 w-full border block py-2 bg-white" placeholder="Select Date"  id="id_Expiry_date">-->
+<!--             </div>-->
+         {{ form.Expiry_date|as_crispy_field }}
+
+<!--              <div id="div_id_Expiry_time" class="mb-3">-->
+<!--                   <label for="id_Expiry_time" class="block text-gray-700 text-sm font-bold mb-2">-->
+<!--            Expiry time-->
+<!--         </label>-->
+<!--          <input type="time" name="Expiry_time" class="timeinput focus:outline-none leading-normal px-4 rounded-lg border-red-500 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Expiry_time"> <p id="error_1_id_Expiry_time" class="text-red-500 text-xs italic">-->
+<!--            </div>-->
+          {{ form.Expiry_time|as_crispy_field }}
+
     <button value="submit" class="bg-purple-800 text-white px-16 py-3 rounded outline-none block" name="Submit">submit</button>
      </form>
 <!--        <form method="post" enctype="multipart/form-data">-->
 <!--            {% csrf_token %}-->
-<!--            {{ form.as_p }}-->
+<!--            {{ form|crispy }}-->
 <!--            <button class="btn btn-primary" type='submit'>Submit</button>-->
 <!--        </form>-->
     </div>
