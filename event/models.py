@@ -31,7 +31,7 @@ class Asset(models.Model):
     # ASSETS_TYPE = [("IOS", 'IOS'), ("ANDROID", 'Android'), ]
     Longitude = models.CharField(max_length=255)
     Latitude = models.CharField(max_length=255)
-    Locations = ArrayField(models.CharField(max_length=255, default=list))
+    # Locations = ArrayField(models.CharField(max_length=255, default=list))
 
     # ASSETS_TYPE = models.CharField(
     #     max_length=8,
