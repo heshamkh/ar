@@ -1,7 +1,9 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from crispy_forms.helper import FormHelper
-from .models import Event, Location, Asset 
+from .models import Event, Location, Asset
+from django.contrib.postgres.fields import ArrayField
+
 
 
 class EventCreationForm(forms.ModelForm):
@@ -50,7 +52,7 @@ class AssetCreationForm(forms.ModelForm):
 
     class Meta:
         model = Asset
-        fields = ['Asset_File', 'Longitude', 'Latitude', 'Expiry_date', 'Expiry_time']
+        fields = ['Asset_File', 'Longitude', 'Latitude', 'Expiry_date', 'Expiry_time', 'Locations']
         widgets = {
             'Expiry_date': forms.DateInput(format=('%Y-%m-%d'),
                                              attrs={'class': 'datepicker1', 'placeholder': 'Select Date', 'type': 'date'}),
@@ -60,6 +62,9 @@ class AssetCreationForm(forms.ModelForm):
     Asset_File = forms.FileField()
     Longitude = forms.NumberInput()
     Latitude = forms.NumberInput()
+    Locations = ArrayField(
+        forms.CharField()
+    )
 
 
 class LocationCreationForm(forms.ModelForm):

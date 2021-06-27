@@ -3,6 +3,36 @@
   <component name="ChangeListManager">
     <list default="true" id="c33984d5-294c-420a-adba-59bd5720574d" name="Default Changelist" comment="profile pic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/event/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0002_auto_20210602_1353.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0003_events.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0004_rename_events_event.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0005_auto_20210602_1406.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0006_auto_20210602_1419.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0007_auto_20210605_1008.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0008_auto_20210605_1014.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0009_auto_20210605_1030.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0010_auto_20210605_1034.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0011_alter_event_locations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0012_remove_event_locations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0013_event_locations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0014_event_asset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0015_alter_event_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0016_auto_20210606_0701.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0017_auto_20210606_0817.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0018_remove_asset_events.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0019_auto_20210606_0850.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0020_auto_20210606_0858.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0021_auto_20210624_1404.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0022_auto_20210626_0729.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/migrations/0023_auto_20210626_0827.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/event/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/templates/Asset_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/templates/Asset_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/event/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Asset_new.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Asset_new.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,12 +48,21 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1uLMLtXPN8bwkKy9HEKBThJCL4g" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -313,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624694828139</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="profile pic">
+      <created>1624708445964</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1624708445964</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

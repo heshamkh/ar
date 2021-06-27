@@ -7,6 +7,8 @@ import qrcode
 from io import BytesIO
 from django.core.files import File
 from PIL import Image, ImageDraw
+from django.contrib.postgres.fields import ArrayField
+
 User = get_user_model()
 
 
@@ -22,13 +24,15 @@ class Asset(models.Model):
     #     default=1,
     #     on_delete=models.CASCADE,
     # )
-    
-    Asset_File = models.FileField(upload_to='Assets/', blank=True)
+    Asset_File = models.FileField(upload_to="covers/")
+
     # featured_image = models.ImageField(upload_to='covers/', blank=True)
     # Google_maps_link = models.CharField(max_length=200)
     # ASSETS_TYPE = [("IOS", 'IOS'), ("ANDROID", 'Android'), ]
     Longitude = models.CharField(max_length=255)
     Latitude = models.CharField(max_length=255)
+    Locations = ArrayField(models.CharField(max_length=255, default=list))
+
     # ASSETS_TYPE = models.CharField(
     #     max_length=8,
     #     choices=ASSETS_TYPE,
