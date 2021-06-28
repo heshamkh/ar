@@ -31,21 +31,19 @@ class Asset(models.Model):
     # ASSETS_TYPE = [("IOS", 'IOS'), ("ANDROID", 'Android'), ]
     Longitude = models.CharField(max_length=255)
     Latitude = models.CharField(max_length=255)
-    # Locations = ArrayField(models.CharField(max_length=255, default=list))
-
-    # ASSETS_TYPE = models.CharField(
-    #     max_length=8,
-    #     choices=ASSETS_TYPE,
-    #     default="IOS",
-    # )
+    # Locations = ArrayField(
+    #      models.CharField(max_length=255, default=list)
+    #  )
+    Multi_Locations = ArrayField(
+        ArrayField(
+            models.CharField(max_length=100, blank=True)
+        ),
+        null=True,
+        size=255
+    )
     Expiry_date = models.DateField(null=True)
     Expiry_time = models.TimeField(null=True)
-    # Locations = models.ForeignKey(
-    #     Location,
-    #     on_delete=models.CASCADE,
-    #     related_name='Asset_Locations',
-    #     null=True
-    # )
+
 
     # def __str__(self):
     #     return self.Longitude
