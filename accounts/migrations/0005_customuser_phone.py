@@ -5,7 +5,6 @@ import phonenumber_field.modelfields
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('accounts', '0004_customuser_profilepic'),
     ]
