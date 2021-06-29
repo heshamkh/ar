@@ -15,7 +15,7 @@ class CustomUserCreationForm(UserCreationForm):
         fields = UserCreationForm.Meta.fields + ('profilePic', 'phone_number',)
         # phone = forms.CharField()
         widgets = {
-            'phone_number': forms.TextInput( attrs={'class': 'PhoneInput', 'type': 'tel',}),
+            'phone_number': forms.TextInput( attrs={'class': 'PhoneInput', 'type': 'tel','value': '+962',}),
         }
 
     def __init__(self, *args, **kwargs):
@@ -31,7 +31,7 @@ class CustomUserChangeForm(UserChangeForm):
         fields = ['username', 'first_name', 'last_name', 'email', 'profilePic', 'phone_number']
         # phone = PhoneNumberField(widget=PhoneNumberPrefixWidget(attrs={'class': "form-control", }, initial='IN'))
         widgets = {
-            'phone_number': forms.TextInput(attrs={'class': 'PhoneInput', 'type': 'tel', }),
+            'phone_number': forms.TextInput(attrs={'class': 'PhoneInput', 'type': 'tel','value': '+962', },),
         }
 
         def __init__(self, *args, **kwargs):
