@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c33984d5-294c-420a-adba-59bd5720574d" name="Default Changelist" comment="db fix">
+    <list default="true" id="30625eef-1116-474e-84e9-bf7819f3bc2a" name="Default Changelist" comment="profile pic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event/templates/Asset_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/templates/Asset_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/templates/Asset_new.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/templates/Asset_new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/event/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Asset_new.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Asset_new.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="development" />
+        <entry key="$PROJECT_DIR$" value="migration_fix" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,7 +29,6 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -254,147 +255,70 @@
       <option name="project" value="LOCAL" />
       <updated>1624462692741</updated>
     </task>
-    <task id="LOCAL-00030" summary="fff">
-      <created>1624518442854</created>
+    <task id="LOCAL-00030" summary="profile pic">
+      <created>1624519923670</created>
       <option name="number" value="00030" />
       <option name="presentableId" value="LOCAL-00030" />
       <option name="project" value="LOCAL" />
-      <updated>1624518442854</updated>
+      <updated>1624519923670</updated>
     </task>
-    <task id="LOCAL-00031" summary="url">
-      <created>1624521758015</created>
+    <task id="LOCAL-00031" summary="profile pic">
+      <created>1624520373006</created>
       <option name="number" value="00031" />
       <option name="presentableId" value="LOCAL-00031" />
       <option name="project" value="LOCAL" />
-      <updated>1624521758016</updated>
+      <updated>1624520373006</updated>
     </task>
-    <task id="LOCAL-00032" summary="url">
-      <created>1624525211988</created>
+    <task id="LOCAL-00032" summary="profile pic">
+      <created>1624524248799</created>
       <option name="number" value="00032" />
       <option name="presentableId" value="LOCAL-00032" />
       <option name="project" value="LOCAL" />
-      <updated>1624525211988</updated>
+      <updated>1624524248800</updated>
     </task>
-    <task id="LOCAL-00033" summary="edit asset">
-      <created>1624527586925</created>
+    <task id="LOCAL-00033" summary="profile pic">
+      <created>1624524567024</created>
       <option name="number" value="00033" />
       <option name="presentableId" value="LOCAL-00033" />
       <option name="project" value="LOCAL" />
-      <updated>1624527586925</updated>
+      <updated>1624524567024</updated>
     </task>
-    <task id="LOCAL-00034" summary="preview">
-      <created>1624528181854</created>
+    <task id="LOCAL-00034" summary="profile pic">
+      <created>1624527627168</created>
       <option name="number" value="00034" />
       <option name="presentableId" value="LOCAL-00034" />
       <option name="project" value="LOCAL" />
-      <updated>1624528181854</updated>
+      <updated>1624527627176</updated>
     </task>
-    <task id="LOCAL-00035" summary="preview2">
-      <created>1624528694796</created>
+    <task id="LOCAL-00035" summary="profile pic">
+      <created>1624532246894</created>
       <option name="number" value="00035" />
       <option name="presentableId" value="LOCAL-00035" />
       <option name="project" value="LOCAL" />
-      <updated>1624528694796</updated>
+      <updated>1624532246894</updated>
     </task>
-    <task id="LOCAL-00036" summary="preview3">
-      <created>1624528840462</created>
+    <task id="LOCAL-00036" summary="profile pic">
+      <created>1624543649260</created>
       <option name="number" value="00036" />
       <option name="presentableId" value="LOCAL-00036" />
       <option name="project" value="LOCAL" />
-      <updated>1624528840462</updated>
+      <updated>1624543649260</updated>
     </task>
-    <task id="LOCAL-00037" summary="22">
-      <created>1624529521925</created>
+    <task id="LOCAL-00037" summary="profile pic">
+      <created>1624691947444</created>
       <option name="number" value="00037" />
       <option name="presentableId" value="LOCAL-00037" />
       <option name="project" value="LOCAL" />
-      <updated>1624529521925</updated>
+      <updated>1624691947444</updated>
     </task>
-    <task id="LOCAL-00038" summary="22dd">
-      <created>1624529882987</created>
+    <task id="LOCAL-00038" summary="profile pic">
+      <created>1624694828139</created>
       <option name="number" value="00038" />
       <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
-      <updated>1624529882987</updated>
+      <updated>1624694828139</updated>
     </task>
-    <task id="LOCAL-00039" summary="22dd">
-      <created>1624530239700</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1624530239700</updated>
-    </task>
-    <task id="LOCAL-00040" summary="sign up">
-      <created>1624532572277</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1624532572277</updated>
-    </task>
-    <task id="LOCAL-00041" summary="phone">
-      <created>1624533785847</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1624533785847</updated>
-    </task>
-    <task id="LOCAL-00042" summary="phone">
-      <created>1624535175672</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1624535175674</updated>
-    </task>
-    <task id="LOCAL-00043" summary="phone">
-      <created>1624535565394</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1624535565395</updated>
-    </task>
-    <task id="LOCAL-00044" summary="phone">
-      <created>1624536075511</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1624536075511</updated>
-    </task>
-    <task id="LOCAL-00045" summary="IntlTelInputWidget">
-      <created>1624539776929</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1624539776929</updated>
-    </task>
-    <task id="LOCAL-00046" summary="IntlTelInputWidget">
-      <created>1624540122454</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1624540122454</updated>
-    </task>
-    <task id="LOCAL-00047" summary="IntlTelInputWidget">
-      <created>1624540556431</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1624540556431</updated>
-    </task>
-    <task id="LOCAL-00048" summary="IntlTelInputWidget phone_number">
-      <created>1624541017034</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1624541017034</updated>
-    </task>
-    <task id="LOCAL-00049" summary="db fix">
-      <created>1624778825992</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1624778825992</updated>
-    </task>
-    <option name="localTasksCounter" value="50" />
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -410,24 +334,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="profile pic" />
     <MESSAGE value="single asset" />
     <MESSAGE value="user asset" />
     <MESSAGE value="jdhvjskv" />
-    <MESSAGE value="fff" />
-    <MESSAGE value="url" />
-    <MESSAGE value="edit asset" />
-    <MESSAGE value="preview" />
-    <MESSAGE value="preview2" />
-    <MESSAGE value="preview3" />
-    <MESSAGE value="22" />
-    <MESSAGE value="22dd" />
-    <MESSAGE value="sign up" />
-    <MESSAGE value="phone" />
-    <MESSAGE value="IntlTelInputWidget" />
-    <MESSAGE value="IntlTelInputWidget phone_number" />
-    <MESSAGE value="db fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="db fix" />
+    <MESSAGE value="profile pic" />
+    <option name="LAST_COMMIT_MESSAGE" value="profile pic" />
   </component>
 </project>

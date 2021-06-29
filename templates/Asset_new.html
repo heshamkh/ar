@@ -82,7 +82,7 @@
         <div class="pages-content-container">
             <map-pick-location></map-pick-location>
         </div>
-        <div class="pages-content-container">
+       <div class="pages-content-container">
             <div class="pages-content-element">
                 <p class="lead">2. Choose the content </p>
                 <p class="paragraph">
@@ -94,45 +94,50 @@
                 <ul>
                     <li>3D Object (.gltf, .glb .zip; max size 50MB)</li>
                     <li>Image (.jpg, .png, .gif; max size 15MB)</li>
+                    <!-- Audio need to be fixed -->
+                    <!-- <li>Audio (.mp3; max size 10MB)</li> -->
                     <li>Video (.mp4; max size 25MB)</li>
                 </ul>
-                <label class="passive-button file-input">
-                    <input  id="content-file" accept="*" type="file" hidden name="Asset_File"  class="clearablefileinput "  onchange="handleImageUpload(this)" />
-                    Upload file
-                </label>
-                    <p id="content-error" class="error"></p>
+                </p>
+<!--                <div id="div_id_Asset_File" class="mb-3">-->
+    <label for="content-file" class="block passive-button file-input text-gray-700 text-sm font-bold mb-2">
+            Asset file
+
+          <input type="file"  id="content-file" accept="*"  name="Asset_File" class="clearablefileinput">
+    </label>
+<!--           </div>-->
+<!--                <label for="content-file"  class="passive-button file-input">-->
+<!--                    <input name="Asset_File" id="content-file" accept="*" type="file" hidden onchange="handleContentUpload(this)" />-->
+<!--                    Upload file-->
+<!--                </label>-->
+                <p id="content-error" class="error"></p>
             </div>
             <div id="content-preview" target="content-file">
             </div>
         </div>
   <div class="creationForm grid grid-cols-2 gap-4">
- <div id="div_id_Asset_File" class="mb-3">
-    <label for="content-file" class="block text-gray-700 text-sm font-bold mb-2">
-            Asset file
-         </label>
-<!--          <input type="file"  id="content-file" accept="*"  name="Asset_File" class="clearablefileinput"  >-->
-           </div>
-           </div>
+
          <div id="div_id_Expiry_date" class="mb-3">
               <label for="id_Expiry_date" class="block text-gray-700 text-sm font-bold mb-2">
             Expiry date
         </label>
         <input type="date" name="Expiry_date" class="datepicker1 dateinput focus:outline-none leading-normal px-4 rounded-lg border-red-500 appearance-none text-gray-700 w-full border block py-2 bg-white" placeholder="Select Date"  id="id_Expiry_date">
              </div>
-              <div id="div_id_Expiry_time" class="mb-3">
+      <div id="div_id_Expiry_time" class="mb-3">
                    <label for="id_Expiry_time" class="block text-gray-700 text-sm font-bold mb-2">
             Expiry time
          </label>
           <input type="time" name="Expiry_time" class="timeinput focus:outline-none leading-normal px-4 rounded-lg border-red-500 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Expiry_time"> <p id="error_1_id_Expiry_time" class="text-red-500 text-xs italic">
             </div>
+
     <button value="submit" class="bg-purple-800 text-white px-16 py-3 rounded outline-none block" name="Submit">submit</button>
-     </form>
+         </div>
+</form>
 <!--        <form method="post" enctype="multipart/form-data">-->
 <!--            {% csrf_token %}-->
 <!--            {{ form.as_p }}-->
 <!--            <button class="btn btn-primary" type='submit'>Submit</button>-->
 <!--        </form>-->
-    </div>
 <page-footer style="display:none;"></page-footer>
     <feedback-button></feedback-button>
 </body>

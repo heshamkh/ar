@@ -36,7 +36,7 @@ def asset_create(request):
     if request.method == 'POST':
         if form.is_valid():
             form.save()
-            return redirect('/')
+            return redirect('/assets')
         else:
             print(form.errors)
     context = {}
