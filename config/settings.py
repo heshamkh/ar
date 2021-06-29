@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'crispy_tailwind',
     'event',
     'tailwind',
+    'intl_tel_input',
     'theme',
     'accounts',
     'phonenumber_field',

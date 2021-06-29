@@ -7,6 +7,8 @@ import qrcode
 from io import BytesIO
 from django.core.files import File
 from PIL import Image, ImageDraw
+from django.contrib.postgres.fields import ArrayField
+
 User = get_user_model()
 
 
@@ -22,26 +24,26 @@ class Asset(models.Model):
     #     default=1,
     #     on_delete=models.CASCADE,
     # )
-    
-    Asset_File = models.FileField(upload_to='Assets/', blank=True)
+    Asset_File = models.FileField(upload_to="covers/")
+
     # featured_image = models.ImageField(upload_to='covers/', blank=True)
     # Google_maps_link = models.CharField(max_length=200)
     # ASSETS_TYPE = [("IOS", 'IOS'), ("ANDROID", 'Android'), ]
-    Longitude = models.FloatField(null=True)
-    Latitude = models.FloatField(null=True )
-    # ASSETS_TYPE = models.CharField(
-    #     max_length=8,
-    #     choices=ASSETS_TYPE,
-    #     default="IOS",
-    # )
+    Longitude = models.CharField(max_length=255)
+    Latitude = models.CharField(max_length=255)
+    # Locations = ArrayField(
+    #      models.CharField(max_length=255, default=list)
+    #  )
+    Multi_Locations = ArrayField(
+        ArrayField(
+            models.CharField(max_length=100, blank=True)
+        ),
+        null=True,
+        size=255
+    )
     Expiry_date = models.DateField(null=True)
     Expiry_time = models.TimeField(null=True)
-    # Locations = models.ForeignKey(
-    #     Location,
-    #     on_delete=models.CASCADE,
-    #     related_name='Asset_Locations',
-    #     null=True
-    # )
+
 
     # def __str__(self):
     #     return self.Longitude

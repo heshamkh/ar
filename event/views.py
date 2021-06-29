@@ -32,16 +32,31 @@ class AssetListView(ListView):
 
 
 def asset_create(request):
+    locations = []
     form = AssetCreationForm(request.POST or None, request.FILES)
+    i = 1
     if request.method == 'POST':
+        for e in request.POST:
+            i = i+1
+            if i > 8:
+                locations.append(request.POST.getlist('location'+ str(i-8)))
         if form.is_valid():
-            form.save()
-            return redirect('/assets')
+            location = Asset(Asset_File=request.FILES['Asset_File'], Longitude=request.POST['Longitude'],
+                             Latitude=request.POST['Latitude'], Expiry_date=request.POST['Expiry_date'],
+                             Expiry_time=request.POST['Expiry_time'], Multi_Locations=locations)
+            Multi_Locations = locations
+            location.save(force_insert=True)
+            # print(request.POST.getlist('location1')[0])
+            # print(locations)
+            print(Multi_Locations)
+
+            return redirect('/')
+
         else:
             print(form.errors)
-    context = {}
-    return render(request, "Asset_new.html", context)
 
+    context = {"form": form}
+    return render(request, "Asset_new.html", context)
 
 # def asset_create(request):
 #     # if this is a POST request we need to process the form data
