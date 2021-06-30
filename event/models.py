@@ -24,26 +24,24 @@ class Asset(models.Model):
     #     default=1,
     #     on_delete=models.CASCADE,
     # )
-    Asset_File = models.FileField(upload_to="covers/")
 
     # featured_image = models.ImageField(upload_to='covers/', blank=True)
     # Google_maps_link = models.CharField(max_length=200)
     # ASSETS_TYPE = [("IOS", 'IOS'), ("ANDROID", 'Android'), ]
-    Longitude = models.CharField(max_length=255)
-    Latitude = models.CharField(max_length=255)
+
     # Locations = ArrayField(
     #      models.CharField(max_length=255, default=list)
     #  )
     Multi_Locations = ArrayField(
         ArrayField(
-            models.CharField(max_length=100, blank=True)
+            models.CharField(max_length=100, null=True)
         ),
         null=True,
         size=255
     )
     Expiry_date = models.DateField(null=True)
     Expiry_time = models.TimeField(null=True)
-
+    asset_id = models.ForeignKey('AssetFile', on_delete=models.CASCADE, null=True)
 
     # def __str__(self):
     #     return self.Longitude
@@ -136,8 +134,5 @@ class Event(models.Model):
         super().save(*args, **kwargs)
 
 
-
-
-
-
-
+class AssetFile(models.Model):
+    Asset_File = models.FileField(upload_to="covers/", max_length=255)

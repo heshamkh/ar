@@ -4,6 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+django-multiupload = "*"
 django_multivalueformfield="*"
 django-cors-headers="*"
 django = "==3.2.3"

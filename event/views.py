@@ -1,15 +1,17 @@
 from django.http import HttpResponse, HttpResponseForbidden
 from django.views.generic import TemplateView, ListView
-from .models import Event, Asset, Location
+from .models import Event, Asset, Location, AssetFile
 from .forms import EventCreationForm, AssetCreationForm, LocationCreationForm
 from django.views.generic import ListView, DetailView  # new
 from django.urls import reverse_lazy
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.core.files.storage import FileSystemStorage
 from django.contrib.auth.mixins import (
     LoginRequiredMixin,
     UserPassesTestMixin
 )
+from django.core.files.storage import FileSystemStorage
 
 
 class HomePageView(TemplateView):
@@ -38,17 +40,29 @@ def asset_create(request):
     if request.method == 'POST':
         for e in request.POST:
             i = i+1
-            if i > 8:
-                locations.append(request.POST.getlist('location'+ str(i-8)))
+            if i > 5:
+                locations.append(request.POST.getlist('location' + str(i-5)))
         if form.is_valid():
-            location = Asset(Asset_File=request.FILES['Asset_File'], Longitude=request.POST['Longitude'],
-                             Latitude=request.POST['Latitude'], Expiry_date=request.POST['Expiry_date'],
+            files = request.FILES.getlist('file[]')
+            # print(files)
+            pimage = AssetFile(Asset_File=files)
+
+            location = Asset(asset_id=pimage.id, Expiry_date=request.POST['Expiry_date'],
                              Expiry_time=request.POST['Expiry_time'], Multi_Locations=locations)
-            Multi_Locations = locations
             location.save(force_insert=True)
+
+            for asset in files:
+                # fs = FileSystemStorage()
+                # file_path = fs.save(asset.name, asset)
+                pimage = AssetFile( Asset_File=asset)
+                pimage.save()
+
+            Multi_Locations = locations
             # print(request.POST.getlist('location1')[0])
             # print(locations)
-            print(Multi_Locations)
+            # print(Multi_Locations)
+
+            print(request.POST)
 
             return redirect('/')
 
