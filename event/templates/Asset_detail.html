@@ -17,11 +17,11 @@
             arjs="sourceType: webcam; debugUIEnabled: false;"
         >
             <a-assets>
-            {% for asset in  object.Asset_File %}
+            {% for asset in  object.multi_uploads %}
                <a-asset-item
 
                     id="animated-asset"
-                    src="{{ asset.Asset_File }}"
+                    src="/media/{{ asset }}"
                 ></a-asset-item>
             {% endfor %}
 

@@ -41,7 +41,11 @@ class Asset(models.Model):
     )
     Expiry_date = models.DateField(null=True)
     Expiry_time = models.TimeField(null=True)
-    asset_id = models.ForeignKey('AssetFile', on_delete=models.CASCADE, null=True)
+    multi_uploads = ArrayField(
+        models.FileField(blank=True, upload_to="covers/"),
+        null=True,
+        size=255
+    )
 
     # def __str__(self):
     #     return self.Longitude
@@ -135,4 +139,11 @@ class Event(models.Model):
 
 
 class AssetFile(models.Model):
-    Asset_File = models.FileField(upload_to="covers/", max_length=255)
+    # id = models.UUIDField(
+    #     primary_key=True,
+    #     # db_index=True,  # new
+    #     default=uuid.uuid4,
+    #     editable=False)
+    file_id = models.AutoField(primary_key=True)
+
+    Asset_File=models.FileField(upload_to="covers/", max_length=255)

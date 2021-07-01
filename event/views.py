@@ -35,6 +35,7 @@ class AssetListView(ListView):
 
 def asset_create(request):
     locations = []
+    asset_files = []
     form = AssetCreationForm(request.POST or None, request.FILES)
     i = 1
     if request.method == 'POST':
@@ -44,32 +45,35 @@ def asset_create(request):
                 locations.append(request.POST.getlist('location' + str(i-5)))
         if form.is_valid():
             files = request.FILES.getlist('file[]')
-            # print(files)
-            pimage = AssetFile(Asset_File=files)
 
-            location = Asset(asset_id=pimage.id, Expiry_date=request.POST['Expiry_date'],
+
+            for asset in files:
+                fs = FileSystemStorage()
+                file_path = fs.save(asset.name, asset)
+
+            # print(asset_files)
+            location = Asset(multi_uploads=files, Expiry_date=request.POST['Expiry_date'],
                              Expiry_time=request.POST['Expiry_time'], Multi_Locations=locations)
             location.save(force_insert=True)
 
-            for asset in files:
-                # fs = FileSystemStorage()
-                # file_path = fs.save(asset.name, asset)
-                pimage = AssetFile( Asset_File=asset)
-                pimage.save()
 
             Multi_Locations = locations
+            Multi_assets = files
             # print(request.POST.getlist('location1')[0])
             # print(locations)
-            # print(Multi_Locations)
+            print(Multi_assets)
 
-            print(request.POST)
+            # print(request.POST)
 
             return redirect('/')
 
         else:
             print(form.errors)
 
-    context = {"form": form}
+    # images = Asset.objects.select_related('asset_id').all()
+    # print(images)
+    context = {"form": form
+               }
     return render(request, "Asset_new.html", context)
 
 # def asset_create(request):
