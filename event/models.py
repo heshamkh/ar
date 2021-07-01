@@ -44,7 +44,7 @@ class Asset(models.Model):
     multi_uploads = ArrayField(
         models.FileField(blank=True, upload_to="covers/"),
         null=True,
-        size=255
+
     )
 
     # def __str__(self):
