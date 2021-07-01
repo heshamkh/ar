@@ -138,12 +138,3 @@ class Event(models.Model):
         super().save(*args, **kwargs)
 
 
-class AssetFile(models.Model):
-    # id = models.UUIDField(
-    #     primary_key=True,
-    #     # db_index=True,  # new
-    #     default=uuid.uuid4,
-    #     editable=False)
-    file_id = models.AutoField(primary_key=True)
-
-    Asset_File=models.FileField(upload_to="covers/", max_length=255)

@@ -1,6 +1,6 @@
 from django.http import HttpResponse, HttpResponseForbidden
 from django.views.generic import TemplateView, ListView
-from .models import Event, Asset, Location, AssetFile
+from .models import Event, Asset, Location
 from .forms import EventCreationForm, AssetCreationForm, LocationCreationForm
 from django.views.generic import ListView, DetailView  # new
 from django.urls import reverse_lazy
