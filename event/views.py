@@ -44,7 +44,7 @@ def asset_create(request):
             if i > 5:
                 locations.append(request.POST.getlist('location' + str(i-5)))
         if form.is_valid():
-            files = request.FILES['Asset_File']
+            files = request.FILES.getlist('file[]')
 
 
             for asset in files:
