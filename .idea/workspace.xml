@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c33984d5-294c-420a-adba-59bd5720574d" name="Default Changelist" comment="muliple locations and assets">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/event/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/event/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/event/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,20 +56,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624440366781</updated>
-    </task>
-    <task id="LOCAL-00011" summary="profile pic">
-      <created>1624451450080</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1624451450080</updated>
-    </task>
-    <task id="LOCAL-00012" summary="profile pic">
-      <created>1624452216670</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1624452216670</updated>
     </task>
     <task id="LOCAL-00013" summary="profile pic">
       <created>1624452240785</created>
@@ -398,7 +386,21 @@
       <option name="project" value="LOCAL" />
       <updated>1625382340547</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="muliple locations and assets">
+      <created>1625382469032</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1625382469032</updated>
+    </task>
+    <task id="LOCAL-00061" summary="muliple locations and assets">
+      <created>1625382506092</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1625382506092</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
