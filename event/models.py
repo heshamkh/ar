@@ -19,11 +19,11 @@ class Asset(models.Model):
         # db_index=True,  # new
         default=uuid.uuid4,
         editable=False)
-    # user = models.ForeignKey(
-    #     User,
-    #     default=1,
-    #     on_delete=models.CASCADE,
-    # )
+    user = models.ForeignKey(
+        User,
+        default=1,
+        on_delete=models.CASCADE,
+    )
 
     # featured_image = models.ImageField(upload_to='covers/', blank=True)
     # Google_maps_link = models.CharField(max_length=200)
