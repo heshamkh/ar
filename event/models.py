@@ -102,13 +102,12 @@ class Location(models.Model):
         return reverse('location_list')
 
     def save(self, *args,**kwargs):
-        qrcode_img = qrcode.make("https://heshamar.herokuapp.com/"+str(self.id)+"/location_details")
-        canvas = Image.new('RGB',(290,290),'white')
-        draw = ImageDraw.Draw(canvas)
+        qrcode_img = qrcode.make("https://heshamar.herokuapp.com/"+str(self.id)+"/assets_details")
+        canvas = Image.new('RGB', (350, 350), 'white')
         canvas.paste(qrcode_img)
-        fname = f'qr_code-{self.id}.png'
+        fname = f'qr_code-{self.name}.png'
         buffer = BytesIO()
-        canvas.save(buffer, 'png')
+        canvas.save(buffer, 'PNG')
         self.qr_code.save(fname, File(buffer), save=False)
         canvas.close()
         super().save(*args, **kwargs)
