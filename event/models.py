@@ -49,7 +49,7 @@ class Asset(models.Model):
     qr_code = models.ImageField(upload_to='qr_codes/', blank=True,null=True)
 
     def save(self, *args,**kwargs):
-        qrcode_img = qrcode.make("http://127.0.0.1:8000/"+str(self.id)+"/event_details")
+        qrcode_img = qrcode.make("https://heshamar.herokuapp.com/"+str(self.id)+"/event_details")
         canvas = Image.new('RGB',(450,450),'white')
         draw = ImageDraw.Draw(canvas)
         canvas.paste(qrcode_img)
