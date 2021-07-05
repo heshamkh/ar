@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c33984d5-294c-420a-adba-59bd5720574d" name="Default Changelist" comment="muliple locations and assets">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/event/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/event/templates/Assets_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/templates/Assets_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,13 +55,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624440366781</updated>
-    </task>
-    <task id="LOCAL-00017" summary="profile pic">
-      <created>1624453166963</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1624453166963</updated>
     </task>
     <task id="LOCAL-00018" summary="profile pic">
       <created>1624453514752</created>
@@ -400,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625472590282</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="muliple locations and assets">
+      <created>1625476445631</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1625476445632</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
