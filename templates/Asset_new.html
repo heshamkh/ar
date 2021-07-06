@@ -175,6 +175,22 @@
             }
         };
 
+        const reader = new FileReader();
+        reader.addEventListener( 'load', function ( event ) {
+
+    const contents = event.target.result;
+
+    const loader = new GLTFLoader();
+    loader.parse( contents, '', function ( gltf ) {
+
+        const scene = gltf.scene;
+        console.log( scene );
+
+    } );
+
+}, false );
+reader.readAsArrayBuffer( file );
+
         image.appendChild(preview);
         image.appendChild(newInput);
         image.appendChild(br);
