@@ -25,13 +25,6 @@ class Asset(models.Model):
         on_delete=models.CASCADE,
     )
 
-    # featured_image = models.ImageField(upload_to='covers/', blank=True)
-    # Google_maps_link = models.CharField(max_length=200)
-    # ASSETS_TYPE = [("IOS", 'IOS'), ("ANDROID", 'Android'), ]
-
-    # Locations = ArrayField(
-    #      models.CharField(max_length=255, default=list)
-    #  )
     Multi_Locations = ArrayField(
         ArrayField(
             models.CharField(max_length=100, null=True)
@@ -48,8 +41,10 @@ class Asset(models.Model):
     )
     qr_code = models.ImageField(upload_to='qr_codes/', blank=True,null=True)
 
+
+
     def save(self, *args,**kwargs):
-        qrcode_img = qrcode.make("https://heshamar.herokuapp.com/"+str(self.id)+"/event_details")
+        qrcode_img = qrcode.make("https://heshamar.herokuapp.com/"+str(self.id)+"/assets_details")
         canvas = Image.new('RGB',(450,450),'white')
         draw = ImageDraw.Draw(canvas)
         canvas.paste(qrcode_img)

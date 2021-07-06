@@ -17,11 +17,13 @@
 <body>
   <header>
     <!-- Fixed navbar -->
-    <div class="flex justify-between align-items-center p-6 bg-white border-bottom shadow-sm">
+    <div class="flex justify-between align-items-center  bg-white border-bottom shadow-sm">
     <div class="my-auto">
             <a href="{% url 'home' %}" class="navbar-brand my-0 font-bold block flex">
-                <div class="rounded-xl bg-purple-300 text-purple-800 p-4 mx-3">Dz</div>
-                <div class="font-bold  flex flex-col justify-center">DazShop</div>
+                <div class=" p-4 mx-3">
+                     <img src="{% static 'images/ar.png' %}" class="w-20" />
+                </div>
+                <div class="font-bold  flex flex-col justify-center"></div>
             </a>
         </div>
     {% if user.is_authenticated %}

@@ -11,11 +11,22 @@ from django.contrib.auth.mixins import (
     LoginRequiredMixin,
     UserPassesTestMixin
 )
-from django.core.files.storage import FileSystemStorage
+from django.db.models import Q
+import datetime
 
 
 class HomePageView(TemplateView):
     template_name = 'home.html'
+
+
+def asset_list(request):
+    now = datetime.datetime.now()
+    assets = Asset.objects.filter(Q(Expiry_date__gte=datetime.date.today()) |
+                                  Q(Expiry_time__gte=now.time()))
+    context = {
+        "assets": assets
+    }
+    return render(request, "Assets_list.html", context)
 
 
 class AssetListView(ListView):
@@ -40,12 +51,11 @@ def asset_create(request):
     i = 1
     if request.method == 'POST':
         for e in request.POST:
-            i = i+1
+            i = i + 1
             if i > 5:
-                locations.append(request.POST.getlist('location' + str(i-5)))
+                locations.append(request.POST.getlist('location' + str(i - 5)))
         if form.is_valid():
             files = request.FILES.getlist('file[]')
-
 
             for asset in files:
                 fs = FileSystemStorage()
@@ -55,7 +65,6 @@ def asset_create(request):
             location = Asset(multi_uploads=files, Expiry_date=request.POST['Expiry_date'],
                              Expiry_time=request.POST['Expiry_time'], Multi_Locations=locations)
             location.save(force_insert=True)
-
 
             Multi_Locations = locations
             Multi_assets = files
@@ -75,6 +84,7 @@ def asset_create(request):
     context = {"form": form
                }
     return render(request, "Asset_new.html", context)
+
 
 # def asset_create(request):
 #     # if this is a POST request we need to process the form data
@@ -154,6 +164,40 @@ class AssetUpdateView(UpdateView):
     model = Asset
     form_class = AssetCreationForm
     template_name = 'Asset_edit.html'
+
+
+def asset_update(request, pk):
+    asset = Asset.objects.get(id=pk)
+    locations = []
+    asset_files = []
+    form = AssetCreationForm(request.POST or None, request.FILES)
+    i = 1
+    if request.method == 'POST':
+        for e in request.POST:
+            i = i + 1
+            if i > 5:
+                locations.append(request.POST.getlist('location' + str(i - 5)))
+        if form.is_valid():
+            files = request.FILES.getlist('file[]')
+
+            for asset in files:
+                fs = FileSystemStorage()
+                file_path = fs.save(asset.name, asset)
+
+            # print(asset_files)
+            location = Asset(multi_uploads=files, Expiry_date=request.POST['Expiry_date'],
+                             Expiry_time=request.POST['Expiry_time'], Multi_Locations=locations)
+            location.save(force_insert=True)
+
+            Multi_Locations = locations
+            Multi_assets = files
+            # print(request.POST.getlist('location1')[0])
+            # print(locations)
+            print(Multi_assets)
+    context = {
+        "asset": asset
+    }
+    return render(request, "Asset_edit.html", context)
 
 
 class AssetDeleteView(DeleteView):
