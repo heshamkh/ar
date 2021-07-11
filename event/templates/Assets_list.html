@@ -6,7 +6,6 @@
 <div class="grid grid-cols-3 gap-4 w-5/6 pl-6 pt-6">
     {% for asset in assets %}
         <div class="card">
-
           <div class="card-header " >
            <a  href="{% url 'Asset_detail' asset.id %}" class="font-weight-bold  underline">
                <img  src="{{ asset.qr_code.url }}" />

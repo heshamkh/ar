@@ -3,16 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c33984d5-294c-420a-adba-59bd5720574d" name="Default Changelist" comment="phone">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/intlTelInput.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/intlTelInput.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/intlTelInput.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/intlTelInput.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/intlTelInput.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/intlTelInput.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/intlTelInput.css.gz" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/intlTelInput.css.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/intlTelInput.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/intlTelInput.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/intlTelInput.min.css.gz" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/intlTelInput.min.css.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/staticfiles.json" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/staticfiles.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/templates/Assets_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/templates/Assets_list.html" afterDir="false" />
     </list>
-    <list default="true" id="c33984d5-294c-420a-adba-59bd5720574d" name="Default Changelist" comment="phone" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +34,9 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1uLMLtXPN8bwkKy9HEKBThJCL4g" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -78,13 +73,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624440366781</updated>
-    </task>
-    <task id="LOCAL-00031" summary="profile pic">
-      <created>1624520373006</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1624520373006</updated>
     </task>
     <task id="LOCAL-00032" summary="profile pic">
       <created>1624524248799</created>
@@ -170,21 +158,6 @@
       <option name="project" value="LOCAL" />
       <updated>1624825255764</updated>
     </task>
-    <task id="LOCAL-00044" summary="phone">
-      <created>1624966591758</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1624966591758</updated>
-    </task>
-    <task id="LOCAL-00045" summary="phone">
-      <created>1624966615364</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1624966615364</updated>
-    </task>
-    <option name="localTasksCounter" value="46" />
     <task id="LOCAL-00044" summary="muliple locations">
       <created>1624899015096</created>
       <option name="number" value="00044" />
@@ -437,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625583946216</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="phone">
+      <created>1625993490653</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1625993490654</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -459,7 +439,6 @@
     <MESSAGE value="profile pic" />
     <MESSAGE value="muliple locations" />
     <MESSAGE value="phone" />
-    <option name="LAST_COMMIT_MESSAGE" value="phone" />
     <MESSAGE value="muliple locations and assets" />
     <option name="LAST_COMMIT_MESSAGE" value="muliple locations and assets" />
   </component>
