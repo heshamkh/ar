@@ -8,7 +8,11 @@
         <div class="card">
           <div class="card-header " >
            <a  href="{% url 'Asset_detail' asset.id %}" class="font-weight-bold  underline">
-               <img  src="{{ asset.qr_code.url }}" />
+              {% if asset.qr_code %}
+                <img  src="{{ asset.qr_code.url }}" />
+            {% else %}
+                <div class="h-32 w-32 bg-gray-300 "></div>
+            {% endif %}
            </a><br>
             <span class="text-muted">Expiry_date: {{ asset.Expiry_date }} <br> Expiry_time: {{ asset.Expiry_time }}  </span>
           </div>
