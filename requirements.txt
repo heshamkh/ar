@@ -51,3 +51,4 @@ django-cors-headers==*
 django-intl-tel-input2
 django_multivalueformfield==*
 django-multiupload==*
+django-celery-beat===*

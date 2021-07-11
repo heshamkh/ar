@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     'accounts',
     'phonenumber_field',
     'corsheaders',
+    'django_celery_beat',
 ]
 AUTH_USER_MODEL = 'accounts.CustomUser'
 CORS_ORIGIN_ALLOW_ALL = True

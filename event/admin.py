@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Asset, Location, Event ,AssetFile
+from .models import Asset, Location, Event
 
 
 # class AssetInline(admin.StackedInline): # new
@@ -25,5 +25,5 @@ from .models import Asset, Location, Event ,AssetFile
 admin.site.register(Asset)
 admin.site.register(Location)
 admin.site.register(Event)
-admin.site.register(AssetFile)
+
 

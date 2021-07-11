@@ -9,50 +9,42 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="https://softylus.com/studio-master/style.css" />
-
     <!-- import the leaflet css and script -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" crossorigin=""
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" />
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" crossorigin=""
         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="></script>
-
-
     <!-- import studio-backend api -->
     <script src="https://raw.githack.com/AR-js-org/studio-backend/master/dist/arjs-studio-backend.min.js"></script>
-
     <!-- import aframe to support model preview -->
     <script src="https://aframe.io/releases/1.0.4/aframe.js"></script>
     <script src="https://cdn.statically.io/gh/donmccurdy/aframe-extras/fe293f78/dist/aframe-extras.loaders.js"></script>
-
     <!-- import JsZip -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.3.0/jszip.min.js"></script>
-
     <!-- import web components -->
-    <script src="https://softylus.com/studio-master/components/back-anchor/back-anchor.js"></script>
-    <script src="https://softylus.com/studio-master/components/file-holder/file-holder.js"></script>
-    <script src="https://softylus.com/studio-master/components/file-select/file-select.js"></script>
-    <script src="https://softylus.com/studio-master/components/map/map-elements.js"></script>
-    <script src="https://softylus.com/studio-master/components/map/map-pick-location.js"></script>
-    <script src="https://softylus.com/studio-master/components/header/header.js"></script>
-    <script src="https://softylus.com/studio-master/components/footer/footer.js"></script>
-    <script src="https://softylus.com/studio-master/components/model-controller/model-controller.js"></script>
-    <script src="https://softylus.com/studio-master/components/feedback/stickybutton.js"></script>
-
+    <script src="{% static 'studio-master/components/back-anchor/back-anchor.js' %}"></script>
+    <script src="{% static 'studio-master/components/file-holder/file-holder.js' %}"></script>
+    <script src="{% static 'studio-master/components/file-select/file-select.js' %}"></script>
+    <script src="{% static 'studio-master/components/map/map-elements.js ' %}"></script>
+    <script src="{% static 'studio-master/components/map/map-pick-location.js ' %}"></script>
+    <script src="{% static 'studio-master/components/header/header.js' %}"></script>
+    <script src="{% static 'studio-master/components/footer/footer.js' %}"></script>
+    <script src="{% static 'studio-master/components/model-controller/model-controller.js' %}"></script>
     <!-- import utils -->
-    <script src="https://softylus.com/studio-master/utils/fileHelper.js"></script>
-    <script src="https://softylus.com/studio-master/utils/fileTemplate.js"></script>
-    <script src="https://softylus.com/studio-master/utils/fileHandler.js"></script>
-    <script src="https://softylus.com/studio-master/pages/location/location.js" defer></script>
+    <script src="{% static 'studio-master/utils/fileHelper.js' %}"></script>
+    <script src="{% static 'studio-master/utils/fileTemplate.js' %}"></script>
+    <script src="{% static 'studio-master/utils/fileHandler.js' %}"></script>
+    <script src="{% static 'studio-master/pages/location/location.js' %}" defer></script>
+    <script src="{% static 'studio-master/pages/location/location.js' %}" defer></script>
 </head>
 
 <body>
 
 
     <div class="pages-content">
-        <back-anchor assetsUrl="https://softylus.com/studio-master/assets"></back-anchor>
+<!--        <back-anchor assetsUrl="https://softylus.com/studio-master/assets"></back-anchor>-->
         <div class="pages-content-container">
             <div class="pages-content-element">
                 <p class="title">Location-based</p>
@@ -99,7 +91,7 @@
                 <p class="bold">
                     Please check the file name and remove whitepaces.
                 </p>
-                <ul>
+                <ul class="my-5">
                     <li>3D Object (.gltf, .glb .zip; max size 50MB)</li>
                     <li>Image (.jpg, .png, .gif; max size 15MB)</li>
                     <li>Video (.mp4; max size 25MB)</li>
@@ -107,53 +99,42 @@
 
 
 
-                <label class="passive-button file-input">
-<!--                    <input  id="content-file" accept="*" type="file" hidden name="Asset_File"  class="clearablefileinput"   />-->
-                    <input multiple id="content-file" name="Asset_File"  class="clearablefileinput"  accept="*" type="file" hidden  onchange="handleImageUpload(this)"/>
-                    Upload file
-                </label>
-                <button type="button" name="add_image" id="add_image" value="Add Image">add asset</button>
+<!--                <label class="passive-button file-input">-->
+<!--&lt;!&ndash;                    <input  id="content-file" accept="*" type="file" hidden name="Asset_File"  class="clearablefileinput"   />&ndash;&gt;-->
+<!--&lt;!&ndash;                    <input multiple id="content-file" name="Asset_File"  class="clearablefileinput"  accept="*" type="file" hidden  />&ndash;&gt;-->
+<!--&lt;!&ndash;                    Upload file&ndash;&gt;-->
+<!--                </label>-->
+                <div>
+                     <div id="images">
+                     </div>
+                    <button  style="background-color:#00992D" class=" text-white my-5 px-16 py-3 rounded outline-none block" type="button" name="add_image" id="add_image"  value="Add Image">Add asset</button>
+                </div>
                     <p id="content-error" class="error"></p>
             </div>
             <div id="content-preview" target="content-file">
             </div>
-        q<div id="images">
+
         </div>
-        </div>
-
-  <div class="creationForm grid grid-cols-2 gap-4">
 
 
-
-
- <div id="div_id_Asset_File" class="mb-3">
-    <label for="content-file" class="block text-gray-700 text-sm font-bold mb-2">
-            Asset file
-         </label>
-<!--          <input type="file"  id="content-file" accept="*"  name="Asset_File" onchange="handleImageUpload(this)"  >-->
-<!--                  <input id="content-file" accept="*" type="file"  name="Asset_File" hidden onchange="handleContentUpload(this)" />-->
-           </div>
-
-
-           </div>
-
-         <div id="div_id_Expiry_date" class="mb-3">
+         <div id="div_id_Expiry_date  " class="mb-3 w-1/2 ml-5">
+             <p class="lead my-5">3- Choose the deadline</p>
               <label for="id_Expiry_date" class="block text-gray-700 text-sm font-bold mb-2">
             Expiry date
         </label>
-        <input type="date" name="Expiry_date" class="datepicker1 dateinput focus:outline-none leading-normal px-4 rounded-lg border-red-500 appearance-none text-gray-700 w-full border block py-2 bg-white" placeholder="Select Date"  id="id_Expiry_date">
+        <input type="date" name="Expiry_date" class="datepicker1 dateinput focus:outline-none leading-normal px-4 rounded-lg  appearance-none text-gray-700 w-full border block py-2 bg-white" placeholder="Select Date"  id="id_Expiry_date">
 
              </div>
-              <div id="div_id_Expiry_time" class="mb-3">
+              <div id="div_id_Expiry_time" class="mb-3 w-1/2 ml-5">
                    <label for="id_Expiry_time" class="block text-gray-700 text-sm font-bold mb-2">
             Expiry time
          </label>
-          <input type="time" name="Expiry_time" class="timeinput focus:outline-none leading-normal px-4 rounded-lg border-red-500 appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Expiry_time"> <p id="error_1_id_Expiry_time" class="text-red-500 text-xs italic">
+          <input type="time" name="Expiry_time" class="timeinput focus:outline-none leading-normal px-4 rounded-lg appearance-none text-gray-700 w-full border block py-2 bg-white"  id="id_Expiry_time"> <p id="error_1_id_Expiry_time" class="text-red-500 text-xs italic">
 
             </div>
 
 
-    <button value="submit" class="bg-purple-800 text-white px-16 py-3 rounded outline-none block" name="Submit">submit</button>
+    <button value="submit" style="background-color:#00992D" class=" text-white ml-5 px-16 py-3 my-5 rounded outline-none block " name="Submit">Submit</button>
 
      </form>
 <!--        <form method="post" enctype="multipart/form-data">-->
@@ -193,6 +174,22 @@
                 fileReader.readAsDataURL(this.files[0])
             }
         };
+
+        const reader = new FileReader();
+        reader.addEventListener( 'load', function ( event ) {
+
+    const contents = event.target.result;
+
+    const loader = new GLTFLoader();
+    loader.parse( contents, '', function ( gltf ) {
+
+        const scene = gltf.scene;
+        console.log( scene );
+
+    } );
+
+}, false );
+reader.readAsArrayBuffer( file );
 
         image.appendChild(preview);
         image.appendChild(newInput);

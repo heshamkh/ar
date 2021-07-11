@@ -19,19 +19,12 @@ class Asset(models.Model):
         # db_index=True,  # new
         default=uuid.uuid4,
         editable=False)
-    # user = models.ForeignKey(
-    #     User,
-    #     default=1,
-    #     on_delete=models.CASCADE,
-    # )
+    user = models.ForeignKey(
+        User,
+        default=1,
+        on_delete=models.CASCADE,
+    )
 
-    # featured_image = models.ImageField(upload_to='covers/', blank=True)
-    # Google_maps_link = models.CharField(max_length=200)
-    # ASSETS_TYPE = [("IOS", 'IOS'), ("ANDROID", 'Android'), ]
-
-    # Locations = ArrayField(
-    #      models.CharField(max_length=255, default=list)
-    #  )
     Multi_Locations = ArrayField(
         ArrayField(
             models.CharField(max_length=100, null=True)
@@ -41,7 +34,27 @@ class Asset(models.Model):
     )
     Expiry_date = models.DateField(null=True)
     Expiry_time = models.TimeField(null=True)
-    asset_id = models.ForeignKey('AssetFile', on_delete=models.CASCADE, null=True)
+    multi_uploads = ArrayField(
+        models.FileField(blank=True, upload_to="covers/"),
+        null=True,
+
+    )
+    qr_code = models.ImageField(upload_to='qr_codes/', blank=True,null=True)
+
+
+
+    def save(self, *args,**kwargs):
+        qrcode_img = qrcode.make("https://heshamar.herokuapp.com/"+str(self.id)+"/assets_details")
+        canvas = Image.new('RGB',(450,450),'white')
+        draw = ImageDraw.Draw(canvas)
+        canvas.paste(qrcode_img)
+        fname = f'qr_code-{self.id}.png'
+        buffer = BytesIO()
+        canvas.save(buffer, 'png')
+        self.qr_code.save(fname, File(buffer), save=False)
+        canvas.close()
+        super().save(*args, **kwargs)
+
 
     # def __str__(self):
     #     return self.Longitude
@@ -84,13 +97,12 @@ class Location(models.Model):
         return reverse('location_list')
 
     def save(self, *args,**kwargs):
-        qrcode_img = qrcode.make("http://127.0.0.1:8000/"+str(self.id)+"/location_details")
-        canvas = Image.new('RGB',(290,290),'white')
-        draw = ImageDraw.Draw(canvas)
+        qrcode_img = qrcode.make("https://heshamar.herokuapp.com/"+str(self.id)+"/assets_details")
+        canvas = Image.new('RGB', (350, 350), 'white')
         canvas.paste(qrcode_img)
-        fname = f'qr_code-{self.id}.png'
+        fname = f'qr_code-{self.name}.png'
         buffer = BytesIO()
-        canvas.save(buffer, 'png')
+        canvas.save(buffer, 'PNG')
         self.qr_code.save(fname, File(buffer), save=False)
         canvas.close()
         super().save(*args, **kwargs)
@@ -134,5 +146,3 @@ class Event(models.Model):
         super().save(*args, **kwargs)
 
 
-class AssetFile(models.Model):
-    Asset_File = models.FileField(upload_to="covers/", max_length=255)
